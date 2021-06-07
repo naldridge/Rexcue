@@ -1,0 +1,34 @@
+
+.button {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+img {
+    border-radius: 50%;
+  }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.side {
+  flex: 30%; 
+  background-color: purple;
+  padding: 20px;
+}
+
+
+.main {
+  flex: 70%; 
+  background-color: purple; 
+  padding: 20px; 
+}
+
