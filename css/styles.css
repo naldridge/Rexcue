@@ -1,3 +1,6 @@
+html {
+    font-family: 'Antic Slab', serif;
+}
 
 .button {
     background-color: grey;
@@ -13,11 +16,11 @@
 img {
     border-radius: 50%;
   }
+
 .row {
   display: flex;
   flex-wrap: wrap;
 }
-
 
 .side {
   flex: 30%; 
@@ -25,10 +28,8 @@ img {
   padding: 20px;
 }
 
-
 .main {
   flex: 70%; 
   background-color: purple; 
   padding: 20px; 
 }
-
