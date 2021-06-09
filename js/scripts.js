@@ -29,3 +29,17 @@ showMeButton.addEventListener('click', function () {
         }
     });
 });
+
+//Define Dog Breed Classes
+class dog {
+    constructor(breed, temperValue1, temperValue2, temperValue3, temperValue4, temperValue5) {
+        this.breed = breed;
+        this.temperValue1 = temperValue1;
+        this.temperValue2 = temperValue2;
+        this.temperValue3 = temperValue3;
+        this.temperValue4 = temperValue4;
+        this.temperValue5 = temperValue5;
+    }
+};
+
+let dog1 = new dog('Jack Russel Terrier', )
