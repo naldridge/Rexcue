@@ -85,60 +85,71 @@
                     </nav>
                 </div>
             </div>
-
+            <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
             <div id="container2">
-                <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+                <!-- <div id="scrollNav">
+                    <a href="#">Welcome</a>
+                    <a href="#page-2">Quiz</a>
+                    <a href="#page-3">Adoption</a>
+                </div> -->
+                <div class="scroll-container">
+                    <!-- <div class="scroll-page" id="welcomeScroll">Welcome</div>
+                    <div class="scroll-page" id="quizScroll">Quiz</div>
+                    <div class="scroll-page" id="adoptionScroll">Adoption</div> -->
 
-                <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
-                <div class="mainContent">
+                    <div class="mainContent">
 
-                    <div class="w3-row w3-padding-64">
-                        <div class="w3-twothird w3-container">
-                            <h1 class="w3-text-teal">Welcome to Rexcue!</h1>
-                            <p> (Describe what rexcue is all about? And how there is a misconseption about certain breeds.) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                        <div class="bottomSection1">
+                        <div class="w3-row w3-padding-64">
+                            <div class="w3-twothird w3-container">
+                                <h1 class="w3-text-teal">Welcome to Rexcue!</h1>
+                                <p> You have decided that it’s time to add a pet to your family. After some consideration, you’ve fallen in love with a particular dog breed. Many people then look for a dog breeder to make their purebred-pup dream come true.</p>
+                                <p>Like any responsible future pet parent, you still have some questions before you take the plunge and choose your new dog, which may be why you’re here! Did you know that there are LOTS of purebred dogs waiting for the perfect
+                                    forever home at shelters and rescue groups? Not only that, but there are also special breed-rescue groups who dedicate their efforts to finding homes for just one breed of dog.</p>
+                                <p>Dogs of every type and breed can end up in shelters. Before you start checking for a breeder to find your next family pet, we recommend starting your search at your local shelter where lots of good boys and good girls are
+                                    anxiously waiting to show you love!</p>
+                            </div>
+                            <div class="bottomSection1">
 
-                        </div>
-                    </div>
-
-                    <div class="w3-row">
-                        <div class="w3-twothird w3-container">
-                            <h1 class="w3-text-teal">Take our Personality Quiz!</h1>
-                            <p>(Describe our EXPERTLY CREATED quiz that will match you with your new best friend) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                        <div class="bottomSection2">
-
-                        </div>
-                    </div>
-
-                    <div class="adoptSection">
-                        <div class="adoptContent">
-                            <h1 class="w3-text-teal">Adoptable Furry Friends!</h1>
-                            <!-- <p>(Pictures go here. Set pictures to random adoptable dogs and have 5 on this page with a link to go to the adoption page.) </p> -->
-                            <div id="dogPics">
-
-
-                                <img id="adoptDog" src="./images/black lab.jpg" alt="blacklab" width="100px" height="100px">
-                                <img id="adoptDog" src="./images/cute dog laying down.jpg" alt="cute" width="100px" height="100px">
-                                <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
-                                <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
-                                <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
-                                <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
                             </div>
                         </div>
-                        <div class="bottomSection3">
 
+                        <div class="w3-row">
+                            <div class="w3-twothird w3-container">
+                                <h1 class="w3-text-teal">Take our Personality Quiz!</h1>
+                                <p>(Describe our EXPERTLY CREATED quiz that will match you with your new best friend) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            <div class="bottomSection2">
+
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Button -->
-                    <div class="w3-center w3-padding-32">
-                        <button class="button">Find Your Best Friend</button>
+                        <div class="adoptSection">
+                            <div class="adoptContent">
+                                <h1 class="w3-text-teal">Adoptable Furry Friends!</h1>
+                                <!-- <p>(Pictures go here. Set pictures to random adoptable dogs and have 5 on this page with a link to go to the adoption page.) </p> -->
+                                <div id="dogPics">
+
+
+                                    <img id="adoptDog" src="./images/black lab.jpg" alt="blacklab" width="100px" height="100px">
+                                    <img id="adoptDog" src="./images/cute dog laying down.jpg" alt="cute" width="100px" height="100px">
+                                    <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
+                                    <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
+                                    <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
+                                    <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
+                                </div>
+                            </div>
+                            <div class="bottomSection3">
+
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="w3-center w3-padding-32">
+                            <button class="button">Find Your Best Friend</button>
+                        </div>
+
                     </div>
                 </div>
             </div>
