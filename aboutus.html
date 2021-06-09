@@ -2,176 +2,169 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
-  
-</head>
-
-    <link href="./css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/about.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6308212b22.js" crossorigin="anonymous"></script>
 
-    <title>REXcue!</title>
+    <title>REXcue! About Us</title>
 
-    </head>
+</head>
 
-    <body>
-      <div class="wrapper">
+<body>
+    <div class="wrapper">
         <div class="background">
-          <img id="dogs2" src="./images/dogsBlue.jpg">
+            <img id="dogs2" src="./images/dogsBlue.jpg">
         </div>
         <!-- Navbar -->
         <div class="nav">
-          <div id="headerContent">
+            <div id="headerContent">
 
-            <div id="navLogo">
-              <h1>RE</h1>
-              <img id="rexLogo" src="./images/rex.png" alt="Rex Logo" style="width: 65px;" />
-              <h1>cue!</h1>
+                <div id="navLogo">
+                    <a id="logoLink" href="./index.html">
+                        <h1>RE</h1>
+                        <img id="rexLogo" src="./images/rex.png" alt="Rex Logo" style="width: 65px;" />
+                        <h1>cue!</h1>
+                    </a>
+                </div>
+                <div class="navbar">
+                    <div id="navLink">
+
+                        <a href="./aboutus.html">About Us <i class="fas fa-users"></i></a>
+
+                    </div>
+                    <div id="navLink">
+
+                        <a href="./mission.html">Mission Statement <i class="fas fa-book"></i></a>
+
+                    </div>
+                    <div id="navLink">
+
+                        <a href="./adoption.html">Adoption <i class="fas fa-dog"></i></a>
+
+                    </div>
+                    <div id="navLink">
+                        <a href="./personality_quiz.html" class="right">Quiz <i class="far fa-edit"></i></a>
+
+
+                    </div>
+                </div>
             </div>
-            <div class="navbar">
-              <div id="navLink">
-
-                <a href="./aboutus.html">About Us</a>
-
-              </div>
-              <div id="navLink">
-
-                <a href="./mission.html">Mission Statement</a>
-
-              </div>
-              <div id="navLink">
-
-                <a href="./adoption.html">Adoption</a>
-
-              </div>
-              <div id="navLink">
-                <a href="./personality_quiz.html" class="right">Quiz</a>
-
-
-              </div>
-            </div>
-          </div>
 
         </div>
 
 
         <!-- Sidebar -->
         <div class="mainContainer">
-          <div id="container1">
-            <div class="menu">
-              <p>
-                <a class="linksMenuIcon" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-                LINKS MENU
-              </p>
-              <nav class="sidebar" id="mySidebar">
-                <a id="xSide" href="javascript:void(0)" onclick="w3_close()" class="" title="Close Menu">
-                  <i class="fa fa-remove"></i>
-                </a>
-                <h4 class="bar-item"><b></b></h4>
-                <ul>
-                  <li>
-                    <a class="" href="#">Dog Breeds</a>
-                  </li>
-                  <li>
-                    <a class="" href="#">Shelters</a>
-                  </li>
-                  <li>
-                    <a class="" href="#">Adoption</a>
-                  </li>
-                  <li>
-                    <a class="" href="#">Dog Joke Modal</a>
-                  </li>
-                </ul>
-              </nav>
+            <div id="container1">
+                <div class="menu">
+                    <p>
+                        <a class="linksMenuIcon" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a> LINKS MENU
+                    </p>
+                    <nav class="sidebar" id="mySidebar">
+                        <a id="xSide" href="javascript:void(0)" onclick="w3_close()" class="" title="Close Menu">
+                            <i class="fa fa-remove"></i>
+                        </a>
+                        <h4 class="bar-item"><b></b></h4>
+                        <ul id="linksMenuBox">
+                            <li>
+                                <a class="" href="#">Dog Breeds <i class="fas fa-bone"></i></a>
+                            </li>
+                            <li>
+                                <a class="" href="#">Shelters <i class="fas fa-home"></i></a>
+                            </li>
+                            <li>
+                                <a class="" href="#">Adoption <i class="fas fa-dog"></i></a>
+                            </li>
+                            <li>
+                                <a class="" href="#">Dog Joke Modal <i class="fas fa-paw"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-          </div>
 
 
-          <div id="container2">
-            <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
-              id="myOverlay"></div>
+            <div id="container2">
+                <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-            <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
-            <div class="mainContent">
+                <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+                <div class="mainContent">
 
-              <div class="w3-row w3-padding-64">
-                <div class="w3-twothird w3-container">
+                    <div class="w3-row w3-padding-64">
+                        <div class="w3-twothird w3-container">
 
-                  <h2 style="text-align:center">Our Team</h2>
-                  <div class="row">
-                    <div class="column">
-                      <div class="card">
-                       
-                        <div class="container">
-                        
-                            <h1> About Us </h1>
-                            <p>
-                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus laborum libero aspernatur eum excepturi dolore
-                              harum. Quaerat eligendi esse, amet officia iste tempore id neque, mollitia nulla ut saepe in. Lorem ipsum dolor sit
-                              amet consectetur adipisicing elit. Cumque dignissimos ab quia aspernatur neque, facilis sequi perspiciatis debitis.
-                              Quo atque tenetur dolores. Esse non maiores beatae, mollitia fugiat doloremque ratione! Lorem ipsum, dolor sit amet
-                              consectetur adipisicing elit. Odit consequatur ducimus ad quo ullam esse, mollitia aperiam, repellendus architecto
-                              nostrum iure, porro possimus. Earum doloremque ipsam modi, atque dolorum cumque? Lorem ipsum dolor sit amet
-                              consectetur adipisicing elit. Itaque alias nostrum recusandae dicta laboriosam. Adipisci quas similique tempore aut
-                              facere, provident dolor deleniti ratione accusantium harum accusamus velit, voluptatibus dolores.
-                            </p>                         
-                          
-                                                
-                            <img src="./brittanyheadshot.jpg" alt="brittany" style="width:20%" style="height: 20%">
-                          <h2>Brittany Fisher</h2>
-                          <p class="title">Freelance Developer</p>
-                          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                          <p>brittany@example.com</p>
-                          <p><button class="button">Contact</button></p>
-                        </div>
-                      </div>
-                    </div>
+                            <h2 style="text-align:center">Our Team</h2>
+                            <div class="row">
+                                <div class="column">
+                                    <div class="card">
 
-                    <div class="column">
-                      <div class="card">
-                        <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
-                        <div class="container">
-                          <h2>Mike Ross</h2>
-                          <p class="title">Art Director</p>
-                          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                          <p>mike@example.com</p>
-                          <p><button class="button">Contact</button></p>
-                        </div>
-                      </div>
-                    </div>
+                                        <div class="container">
 
-                    <div class="column">
-                      <div class="card">
-                        <img src="/w3images/team3.jpg" alt="John" style="width:100%">
-                        <div class="container">
-                          <h2>John Doe</h2>
-                          <p class="title">Designer</p>
-                          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                          <p>john@example.com</p>
-                          <p><button class="button">Contact</button></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-    </body>
+                                            <h1> About Us </h1>
+                                            <p>
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus laborum libero aspernatur eum excepturi dolore harum. Quaerat eligendi esse, amet officia iste tempore id neque, mollitia nulla ut saepe in. Lorem ipsum dolor sit amet consectetur adipisicing
+                                                elit. Cumque dignissimos ab quia aspernatur neque, facilis sequi perspiciatis debitis. Quo atque tenetur dolores. Esse non maiores beatae, mollitia fugiat doloremque ratione! Lorem ipsum, dolor sit amet
+                                                consectetur adipisicing elit. Odit consequatur ducimus ad quo ullam esse, mollitia aperiam, repellendus architecto nostrum iure, porro possimus. Earum doloremque ipsam modi, atque dolorum cumque? Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. Itaque alias nostrum recusandae dicta laboriosam. Adipisci quas similique tempore aut facere, provident dolor deleniti ratione accusantium harum accusamus velit,
+                                                voluptatibus dolores.
+                                            </p>
 
+
+                                            <img src="./brittanyheadshot.jpg" alt="brittany" style="width:20%" style="height: 20%">
+                                            <h2>Brittany Fisher</h2>
+                                            <p class="title">Freelance Developer</p>
+                                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                                            <p>brittany@example.com</p>
+                                            <p><button class="button">Contact</button></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="card">
+                                        <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+                                        <div class="container">
+                                            <h2>Mike Ross</h2>
+                                            <p class="title">Art Director</p>
+                                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                                            <p>mike@example.com</p>
+                                            <p><button class="button">Contact</button></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="card">
+                                        <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+                                        <div class="container">
+                                            <h2>John Doe</h2>
+                                            <p class="title">Designer</p>
+                                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                                            <p>john@example.com</p>
+                                            <p><button class="button">Contact</button></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Needs to be closed^^ -->
+                            <footer id="footer">
+
+                                <div id="footer" ">
+                <p>
+                    <center>A Website Created By The Disembodied Voices</center>
+                </p>
+            </div>
+        </footer>
+
+        <!-- END MAIN -->
+    </div>
+
+    <script src="./js/scripts.js "></script>
+</body>
 </html>
-</div>
-<div class="bottomSection1">
-
-</div>
-</div>
-
-<div class="w3-row">
-  <div class="w3-twothird w3-container">
-
-
-  </div>
-  <div class="bottomSection2">
-
-  </div>
-</div>
