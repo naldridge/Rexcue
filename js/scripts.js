@@ -1,6 +1,5 @@
 `use strict`
 
-
 /* 
 document.addEventListener('DOMContentLoaded', function () {
     fetch()
@@ -16,12 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
         })
 
 }); */
+
 //Style the Personality Quiz input selections
 const inputs = document.querySelectorAll('input');
 const showMeButton = document.getElementById('showMe');
 
-showMeButton.addEventListener('click', function () {
-    inputs.forEach(function (input) {
+showMeButton.addEventListener('click', function() {
+    inputs.forEach(function(input) {
         if (input.checked) {
             input.parentNode.style.color = "green";
         } else {
@@ -53,4 +53,3 @@ function w3_close() {
     mySidebar.style.display = "none";
     overlayBg.style.display = "none";
 }
-

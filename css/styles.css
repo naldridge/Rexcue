@@ -62,6 +62,12 @@ div.navbar {
     flex-direction: row;
 }
 
+#logoLink {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
 #navbar ul {
     display: flex;
     flex-direction: row;
@@ -159,6 +165,10 @@ nav a:hover::before {
     list-style: none;
 }
 
+#sideNavLinkList {
+    padding-left: 0px;
+}
+
 
 /* Main Middle Text Content ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -174,8 +184,8 @@ nav,
 
 .scroll-container {
     display: flex;
-    width: 74%;
-    max-width: 1110px;
+    width: 72%;
+    max-width: 1140px;
     max-height: 690px;
     overflow-y: scroll;
     scroll-behavior: smooth;
@@ -287,4 +297,26 @@ nav,
 #adoptDog {
     border-radius: 50%;
     justify-content: space-between;
+}
+
+#topNavIcon {
+    display: flex;
+}
+
+.adoptButtonSection {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.button {
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 40%;
+    height: 50px;
+    color: white;
+    background-color: yellowgreen;
+    font-size: larger;
+    margin-bottom: 10px;
 }
