@@ -165,26 +165,12 @@ nav a:hover::before {
 
 /* Scroll Nav ~~~~~~~~~~~~~~~~~~~~~ */
 
-
-/* a {
-    display: inline-block;
-    width: 50px;
-    text-decoration: none;
-} */
-
 nav,
 .scroll-container {
     display: block;
     margin: 0 auto;
     text-align: left;
 }
-
-
-/* nav {
-    width: 339px;
-    padding: 5px;
-    border: 1px solid black;
-} */
 
 .scroll-container {
     display: flex;
@@ -197,10 +183,7 @@ nav,
 
 .scroll-page {
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
     height: 100%;
-    /* font-size: 5em; */
 }
 
 
