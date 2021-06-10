@@ -78,6 +78,9 @@ function buildQuote(theQuote) {
     toggleModal();
 }
 
+// const tellJoke = document.querySelector(`#dogJokeModal`);
+
+
 document.addEventListener('DOMContentLoaded', function() {
     fetch('https://api.chucknorris.io/jokes/random?category=dev')
         .then(function(response) {
