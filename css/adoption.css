@@ -320,3 +320,7 @@ nav,
     font-size: larger;
     margin-bottom: 10px;
 }
+
+#mainContentLinks a:hover {
+    color: transparent;
+}
