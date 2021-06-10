@@ -26,6 +26,7 @@ body {
 .nav {
     display: flex;
     background-color: white;
+    background-image: url(https://www.transparenttextures.com/patterns/gplay.png) !important;
     width: 100%;
     position: fixed;
     flex-direction: row;
@@ -167,6 +168,44 @@ nav a:hover::before {
 
 #linksMenuBox {
     padding-left: 0px;
+}
+
+
+/* Modal Overlay~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.modal__overlay {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    display: none;
+}
+
+.modal__overlay.visible {
+    display: flex;
+}
+
+.modal__content {
+    background-color: white;
+    display: block;
+    margin: auto;
+    position: relative;
+    padding: 16px;
+    height: 300px;
+    width: 600px;
+    border-radius: 8px;
+}
+
+button.modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 8px;
+    border: none;
 }
 
 
