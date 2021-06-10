@@ -1,5 +1,9 @@
 `use strict`
 
+
+
+
+
 /* 
 document.addEventListener('DOMContentLoaded', function () {
     fetch()
@@ -20,9 +24,9 @@ const inputs = document.querySelectorAll('input');
 const showMeButton = document.getElementById('showMe');
 
 function showResults() {
-     const resultsArray = [];
-     
-     
+    const resultsArray = [];
+
+
     //Gets input values on quiz
     for (i = 0; i < inputs.length; i++) {
         if (inputs[i].type = "radio") {
@@ -33,9 +37,16 @@ function showResults() {
     };
     //filters resultsArray to remove empty radio selections
     const answeredArray = resultsArray.filter(function () { return true });
+    const newUser = createUser(answeredArray);
 
-    //console.log(answeredArray);    
+    console.log(newUser);
 };
+
+//creates User and fills it will the answeredArray
+function createUser(answeredArray) {
+    const newUser = new User(answeredArray)
+    return newUser;
+}
 
 showMeButton.addEventListener('click', function () {
     //styles form answers based on user's inputs
@@ -43,19 +54,15 @@ showMeButton.addEventListener('click', function () {
         if (input.checked) {
             input.parentNode.style.color = "green";
         } else {
-            console.log("THIS IS NOT CHECKED")
+            //console.log("THIS IS NOT CHECKED")
             input.parentNode.style.color = "red";
         }
     });
     showResults();
 });
 
-function mapAnsweredArray() {
-    
-}
-
 //Define Dog Breed Classes
-class dog {
+class Dog {
     constructor(breed, traitValue1, traitValue2, traitValue3, traitValue4, traitValue5) {
         this.breed = breed;
         this.traitValue1 = traitValue1;
@@ -69,20 +76,27 @@ class dog {
     }
 };
 
-class user {
+class User {
+    traitvalues = []
 
-    constructor( traitValue1, traitValue2, traitValue3, traitValue4, traitValue5) {
-        this.traitValue1 = traitValue1;
-        this.traitValue2 = traitValue2;
-        this.traitValue3 = traitValue3;
-        this.traitValue4 = traitValue4;
-        this.traitValue5 = traitValue5;
+    constructor(traitvalues) {
+        this.traitvalues = traitvalues;
     }
+  /*   getTraitValues(traitArray) {
+        this.traitvalues = [...traitArray];
+        console.log(this.traitvalues);
+        return this.traitvalues;
+    } */
 };
 
+let dog1 = new Dog('Jack Russell Terrier', '3', '3', '5', '2', '4');
+let dog2 = new Dog('American Bulldog', '2', '2', '5', '2', '5');
+let dog3 = new Dog('Great Dane', '2', '4', '2', '4', '3');
+let dog4 = new Dog('Chihuahua', '1', '5', '1', '4', '5');
+let dog5 = new Dog('German Shepherd', '5', '1', '5', '5', '5');
+/* let newUser = new User(); */
 
-let dog1 = new dog('Jack Russell Terrier', '3', '3', '5', '2', '4');
-let dog2 = new dog('American Bulldog', '2', '2', '5', '2', '5');
-let dog3 = new dog('Great Dane', '2', '4', '2', '4', '3');
-let dog4 = new dog('Chihuahua', '1', '5', '1', '4', '5');
-let dog5 = new dog('German Shepherd', '5', '1', '5', '5', '5');
+    
+
+
+
