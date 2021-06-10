@@ -119,6 +119,10 @@ h1 {
     justify-content: flex-start;
 }
 
+#topNavIcon {
+    display: flex;
+}
+
 
 /* Side Navigation Link Menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -303,7 +307,7 @@ nav,
     min-width: 790px;
     height: 100%;
     min-height: 1248px;
-    max-height: 100%;
+    max-height: 96%;
     justify-content: center;
     align-self: center;
     align-content: center;
@@ -324,16 +328,16 @@ nav,
     width: 100%;
 }
 
-#footer {
+
+/* #footer {
     height: 20px;
     position: sticky;
-    /* background-color: #f06543; */
     width: 100%;
     align-items: center;
     align-content: center;
     justify-content: center;
     bottom: 0;
-}
+} */
 
 .wrapper {
     display: flex;
@@ -345,36 +349,37 @@ nav,
     flex-grow: 1;
 }
 
-#dogPics {
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    padding-bottom: 20px;
-}
-
-#adoptDog {
-    border-radius: 50%;
-    justify-content: space-between;
-}
-
-#topNavIcon {
-    display: flex;
-}
-
 .adoptButtonSection {
     display: flex;
     width: 100%;
     justify-content: center;
+    align-content: center;
+    align-items: center;
     padding-top: 10px;
 }
 
 .button {
     border: 1px solid white;
     border-radius: 3px;
-    width: 40%;
+    width: 70%;
     height: 50px;
     color: white;
     background-color: yellowgreen;
     font-size: larger;
     margin-bottom: 10px;
+}
+
+.breedSelection {
+    display: flex;
+    width: 100%;
+}
+
+.mainContent {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+#breedsContent {
+    text-transform: capitalize;
 }
