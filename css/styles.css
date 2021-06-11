@@ -14,7 +14,6 @@ body {
     margin: auto;
     justify-content: center;
     width: 100%;
-    min-width: 1055px;
     height: 100%;
     position: absolute;
     background-color: rgb(255, 255, 255);
@@ -25,6 +24,7 @@ body {
 
 .nav {
     display: flex;
+    max-width: 100vw;
     background-color: white;
     background-image: url(https://www.transparenttextures.com/patterns/gplay.png) !important;
     width: 100%;
@@ -152,14 +152,11 @@ nav a:hover::before {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    position: sticky;
-    left: 0;
-    width: 150px;
+    width: 100%;
     height: 100%;
-    margin-left: 10%;
     align-content: center;
     align-items: center;
-    background-color: transparent;
+   
 }
 
 .bar-item {
@@ -167,8 +164,12 @@ nav a:hover::before {
 }
 
 #linksMenuBox {
-    padding-left: 0px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
+
 
 
 /* Modal Overlay~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -240,15 +241,7 @@ nav,
     text-align: left;
 }
 
-.scroll-container {
-    display: flex;
-    width: 72%;
-    max-width: 1140px;
-    max-height: 690px;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    justify-content: center;
-}
+
 
 .scroll-page {
     display: flex;
@@ -259,38 +252,39 @@ nav,
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .mainContent {
+    padding: 0 16px;
     z-index: 3;
 }
 
 .mainContainer {
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
+   flex-wrap: wrap;
+   margin: 90px auto 0;
+   max-width: 790px;
 }
 
 #container1 {
     display: flex;
-    max-width: 15%;
-    flex-direction: column;
     margin: 0;
-    margin-top: 90px;
     align-self: flex-start;
-    position: fixed;
+    padding: 0 16px;
+    width: 100%;
 }
 
 #container2 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1110px;
-    max-height: 690px;
     margin: auto;
-    margin-top: 90px;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
-
+#container2 img{
+    width: 100%;
+    height: auto;
+}
 
 /* Background Pic ~~~~~~~~~~~ */
 
@@ -316,13 +310,17 @@ nav,
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .background {
+    background: #72a4c7 url("../images/dogsBlue.jpg") bottom center no-repeat;
+    background-size: contain;
     display: flex;
     height: 100%;
     margin: auto;
+    padding-bottom: 500px;
     position: absolute;
     justify-content: center;
     z-index: -1;
     width: 100%;
+    min-height: 2000px;
 }
 
 #footer {
@@ -337,6 +335,8 @@ nav,
 }
 
 .wrapper {
+    width: 100%;
+    min-width: 100vw;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -348,11 +348,16 @@ nav,
 
 #dogPics {
     display: flex;
+    flex-wrap: wrap;
     align-content: center;
     justify-content: space-between;
     padding-bottom: 20px;
 }
 
+#dogPics img {
+    width: 100px;
+    height: 100px;
+}
 #adoptDog {
     border-radius: 50%;
     justify-content: space-between;
