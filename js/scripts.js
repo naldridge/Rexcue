@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const inputs = document.querySelectorAll('input');
 const showMeButton = document.getElementById('showMe');
+const quizResults = document.getElementById('quizResults');
+
 
 function showResults() {
     const resultsArray = [];
@@ -38,15 +40,43 @@ function showResults() {
     //filters resultsArray to remove empty radio selections
     const answeredArray = resultsArray.filter(function () { return true });
     const newUser = createUser(answeredArray);
+    
 
-    console.log(newUser);
+    let match = Dogs.find(match => match.traitValue1 === answeredArray[0]
+        && match.traitValue2 === answeredArray[1]
+        && match.traitValue3 === answeredArray[2]
+        && match.traitValue4 === answeredArray[3]
+        && match.traitValue5 === answeredArray[4]);
+
+    function showMatch() {
+        if (Boolean(match)) {
+            let matchBreed = match.breed;
+            console.log("match is: ", match.breed);
+            quizResults.innerText =  matchBreed;
+            return match;
+        } else {
+            console.log("no match found");
+            return;
+        };
+    };
+
+    showMatch();
+
+    console.log(match);
+
+
 };
+
+
 
 //creates User and fills it will the answeredArray
 function createUser(answeredArray) {
     const newUser = new User(answeredArray)
     return newUser;
-}
+};
+
+
+
 
 showMeButton.addEventListener('click', function () {
     //styles form answers based on user's inputs
@@ -61,20 +91,75 @@ showMeButton.addEventListener('click', function () {
     showResults();
 });
 
+
+
 //Define Dog Breed Classes
-class Dog {
+let Dogs = [
+    {
+        "breed": "Jack Russell Terrier",
+        "traitValue1": "3",
+        "traitValue2": "3",
+        "traitValue3": "5",
+        "traitValue4": "2",
+        "traitValue5": "4",
+    },
+    {
+        "breed": "American Bulldog",
+        "traitValue1": "2",
+        "traitValue2": "2",
+        "traitValue3": "5",
+        "traitValue4": "2",
+        "traitValue5": "5",
+    },
+    {
+        "breed": "Great Dane",
+        "traitValue1": "2",
+        "traitValue2": "4",
+        "traitValue3": "2",
+        "traitValue4": "4",
+        "traitValue5": "3",
+    },
+    {
+        "breed": "Chihuahua",
+        "traitValue1": "1",
+        "traitValue2": "5",
+        "traitValue3": "1",
+        "traitValue4": "4",
+        "traitValue5": "5",
+    },
+    {
+        "breed": "German Shepherd",
+        "traitValue1": "5",
+        "traitValue2": "1",
+        "traitValue3": "5",
+        "traitValue4": "5",
+        "traitValue5": "5",
+    },
+    /* {
+        "breed": "",
+        "traitValue1": "",
+        "traitValue2": "",
+        "traitValue3": "",
+        "traitValue4": "",
+        "traitValue5": "",
+    }, */
+]
+/* class Dog {
     constructor(breed, traitValue1, traitValue2, traitValue3, traitValue4, traitValue5) {
         this.breed = breed;
+        //this.traitValueArray = traitValueArray;
         this.traitValue1 = traitValue1;
         this.traitValue2 = traitValue2;
         this.traitValue3 = traitValue3;
         this.traitValue4 = traitValue4;
         this.traitValue5 = traitValue5;
-    }
-    getBreedCard() {
-        return (`You are a ${this.breed}!`);
-    }
-};
+    };
+
+    updateBreedArray() {
+        breedArray.push(Object.values(this));
+    };
+
+}; */
 
 class User {
     traitvalues = []
@@ -82,21 +167,22 @@ class User {
     constructor(traitvalues) {
         this.traitvalues = traitvalues;
     }
-  /*   getTraitValues(traitArray) {
-        this.traitvalues = [...traitArray];
-        console.log(this.traitvalues);
-        return this.traitvalues;
-    } */
 };
 
-let dog1 = new Dog('Jack Russell Terrier', '3', '3', '5', '2', '4');
-let dog2 = new Dog('American Bulldog', '2', '2', '5', '2', '5');
-let dog3 = new Dog('Great Dane', '2', '4', '2', '4', '3');
-let dog4 = new Dog('Chihuahua', '1', '5', '1', '4', '5');
-let dog5 = new Dog('German Shepherd', '5', '1', '5', '5', '5');
-/* let newUser = new User(); */
+/* let dog1 = new Dog('Jack Russell Terrier', '3', '3', '5', '2', '4').updateBreedArray();
+let dog2 = new Dog('American Bulldog', '2', '2', '5', '2', '5').updateBreedArray();
+let dog3 = new Dog('Great Dane', '2', '4', '2', '4', '3').updateBreedArray();
+let dog4 = new Dog('Chihuahua', '1', '5', '1', '4', '5').updateBreedArray();
+let dog5 = new Dog('German Shepherd', '5', '1', '5', '5', '5').updateBreedArray(); */
 
-    
+
+
+
+
+
+
+
+
 
 
 
