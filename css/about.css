@@ -26,6 +26,7 @@ body {
 .nav {
     display: flex;
     background-color: white;
+    background-image: url(https://www.transparenttextures.com/patterns/gplay.png) !important;
     width: 100%;
     position: fixed;
     flex-direction: row;
@@ -170,6 +171,63 @@ nav a:hover::before {
 }
 
 
+/* Modal Overlay~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.modal__overlay {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    display: none;
+}
+
+.modal__overlay.visible {
+    display: flex;
+}
+
+.modal__content {
+    background-color: white;
+    display: block;
+    margin: auto;
+    position: relative;
+    padding: 16px;
+    height: 500px;
+    width: 600px;
+    border-radius: 8px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+button.modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 8px;
+    border: none;
+}
+
+#modalBox {
+    z-index: 10;
+}
+
+#dogGif {
+    display: flex;
+}
+
+#modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-content: center; */
+    /* align-items: center; */
+}
+
+
 /* Main Middle Text Content ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -308,4 +366,55 @@ nav,
     width: 100%;
     justify-content: center;
     padding-top: 10px;
+}
+
+.button {
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 40%;
+    height: 50px;
+    color: white;
+    background-color: yellowgreen;
+    font-size: larger;
+    margin-bottom: 10px;
+}
+
+.card3 {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+}
+
+.card2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.card1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#contactImg {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+#contactContent {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+#zachImg {
+    width: 100%;
+    justify-content: space-evenly;
 }
