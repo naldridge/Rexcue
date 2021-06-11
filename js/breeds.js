@@ -1,5 +1,10 @@
 `use strict`
 
+
+const petfinder_api = `paW772Z8rRxE4cotRZKS9AyFJ2L89ODqmLBlOsOp2T8CzUruit`
+const secret_key = `uoT0TLvaAGd0GTYghEWnvnGFUPD65JCeoeLZKytn`
+
+
 // Build breed list ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function buildBreeds(data) {
     const breedList = data.message;
@@ -33,29 +38,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
     // fetch('https://dog.ceo/api/breeds/image/all')
-    // .then(function(response) {
-    //     return response.json();
-    // })
-    // .then(function(data) {
-    //     // console.log("the data is: ", data);
-    //     // console.log("the message is: ", data.message);
-    //     buildBreeds(data);
+    //     .then(function(response) {
+    //         return response.json();
+    //     })
+    //     .then(function(data) {
+    //         // console.log("the data is: ", data);
+    //         // console.log("the message is: ", data.message);
+    //         buildBreeds(data);
 
-    // })
-    // .catch(function(error) {
-    //     console.error("ERROR: ", error);
-    //     return error;
-    // });
+    //     })
+    //     .catch(function(error) {
+    //         console.error("ERROR: ", error);
+    //         return error;
+    //     });
 
 
 });
 
 
-// Build Breed Pic Next To List ~~~~~~~~~~~~~~~~~~~~~~~~~
+// Build Breed Pic Next To List~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-
-// Get the Sidebar ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Get the Sidebar~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const mySidebar = document.getElementById("mySidebar");
 
 // Get the DIV with overlay effect
@@ -102,32 +106,31 @@ function buildQuote(theQuote) {
     toggleModal();
 }
 
-// const tellJoke = document.querySelector(`#dogJokeModal`);
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     fetch('https://api.chucknorris.io/jokes/random?category=dev')
-//         .then(function(response) {
-//             return response.json();
-//         })
-//         .then(function(data) {
-//             buildQuote(data.value);
-//         })
-//         .catch(function(error) {
-//             console.error("ERROR: ", error);
-//             return error;
-//         });
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('https://api.chucknorris.io/jokes/random?category=dev')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            buildQuote(data.value);
+        })
+        .catch(function(error) {
+            console.error("ERROR: ", error);
+            return error;
+        });
 
-//     document.addEventListener('keydown', function(event) {
-//         console.log("the key that was pressed is: ", event.key);
-//         if (event.key === 'Escape') {
-//             toggleModal();
-//         }
-//     });
+    document.addEventListener('keydown', function(event) {
+        console.log("the key that was pressed is: ", event.key);
+        if (event.key === 'Escape') {
+            toggleModal();
+        }
+    });
 
-//     const overlay = document.querySelector('#overlay');
+    const overlay = document.querySelector('#overlay');
 
-//     overlay.addEventListener('click', function() {
-//         toggleModal();
-//     });
-// });
+    overlay.addEventListener('click', function() {
+        toggleModal();
+    });
+});
