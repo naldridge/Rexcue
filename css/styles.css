@@ -247,6 +247,7 @@ nav,
     max-height: 690px;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    justify-content: center;
 }
 
 .scroll-page {
@@ -377,4 +378,8 @@ nav,
     background-color: yellowgreen;
     font-size: larger;
     margin-bottom: 10px;
+}
+
+.missionContent {
+    width: 100%;
 }

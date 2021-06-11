@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6308212b22.js" crossorigin="anonymous"></script>
 
-    <title>REXcue! Mission Statement</title>
+    <title>REXcue!</title>
 
 </head>
 
@@ -62,7 +62,8 @@
             <div id="container1">
                 <div class="menu">
                     <p>
-                        <a class="linksMenuIcon" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a> LINKS MENU
+                        <a class="linksMenuIcon" href="javascript:void(0)" onclick="w3_open()"><i
+                                class="fa fa-bars"></i></a> LINKS MENU
                     </p>
                     <nav class="sidebar" id="mySidebar">
                         <a id="xSide" href="javascript:void(0)" onclick="w3_close()" class="" title="Close Menu">
@@ -71,76 +72,91 @@
                         <h4 class="bar-item"><b></b></h4>
                         <ul id="linksMenuBox">
                             <li>
-                                <a class="" href="#">Dog Breeds <i class="fas fa-bone"></i></a>
+                                <a class="" href="./breeds.html">Dog Breeds <i class="fas fa-bone"></i></a>
                             </li>
                             <li>
                                 <a class="" href="#">Shelters <i class="fas fa-home"></i></a>
                             </li>
                             <li>
-                                <a class="" href="#">Adoption <i class="fas fa-dog"></i></a>
+                                <a class="" href="./adoption.html">Adoption <i class="fas fa-dog"></i></a>
                             </li>
                             <li>
-                                <a class="" href="#">Dog Joke Modal <i class="fas fa-paw"></i></a>
+                                <a class="dogJokModal" href="#">Dog Joke Modal <i class="fas fa-paw"></i></a>
                             </li>
                         </ul>
+
                     </nav>
                 </div>
             </div>
-
+            <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
             <div id="container2">
-                <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+                <!-- Joke Modal -->
+                <div id="modalBox">
+                    <div id="overlay" class="modal__overlay">
+                        <div id="modal" class="modal__content">
+                            <h1>HEY MAN.......wanna hear a joke?</h1>
+                            <p></p>
+                            <img id="dogGif" src="./images/laughingdog.gif" alt="Laughing Dog">
+                            <button type="button" id="closeModal" class="modal__close">X</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Joke Modal -->
+                <div class="scroll-container">
+                    <div class="mainContent">
+                        <div class="missionSection">
+                            <div class="missionContent">
+                                <center>
+                                    <h1>Our Mission</h1>
+                                </center>
+                                <p>To use Internet technology and the resources it can generate to:</p>
+                                <ul>
+                                    <li>
+                                        Increase public awareness of the availability of high-quality adoptable pets
+                                    </li>
+                                    <li>
+                                        Increase the overall effectiveness of pet adoption programs across North America to the extent that the euthanasia of adoptable pets is eliminated
+                                    </li>
+                                    <li>
+                                        Elevate the status of pets to that of family member
+                                    </li>
+                                </ul>
+                                From the comfort of their personal computers, pet lovers can search for a pet that best matches their needs. They can then reference a shelter’s web page and discover what services it offers. Petfinder also includes discussion forums, a pet-care resource
+                                directory and a library of free pet-care articles to help keep pets in their homes.</p>
+                                <p>
+                                    <p></p>
+                            </div>
+                        </div>
+                        <div class="adoptSection">
+                            <div class="adoptContent">
+                                <h1>Adoptable Furry Friends!</h1>
+                                <div id="dogPics">
+                                    <img id="adoptDog" src="./images/black lab.jpg" alt="blacklab" width="100px" height="100px">
+                                    <img id="adoptDog" src="./images/cute dog laying down.jpg" alt="cute" width="100px" height="100px">
+                                    <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
+                                    <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
+                                    <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
+                                    <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
 
-                <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
-                <div class="mainContent">
+            <div id="footer" ">
+                <p>
+                    <center>A Website Created By The Disembodied Voices</center>
+                </p>
+            </div>
+        </footer>
 
-                    <div class="w3-row w3-padding-64">
-                        <div class="w3-twothird w3-container">
+        <!-- END MAIN -->
+    </div>
 
-                            <h2 style="text-align:center"> Mission Statement</h2>
-                            <div class="row">
-                                <div class="column">
-                                    <div class="card">
-
-                                        <div class="container">
-
-
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptates ipsam vitae dolorem eligendi saepe, consequuntur magnam itaque reprehenderit quis ad necessitatibus ea ducimus rerum error, sint voluptatum
-                                                nesciunt culpa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tempore, accusantium facilis quaerat, ducimus in a, deserunt suscipit mollitia illo dignissimos ex. Facere porro voluptatum
-                                                quisquam iste. Nisi, iste qui.</p>
-
-
-
-                                        </div>
-                                        <div class="bottomSection1">
-
-                                        </div>
-                                    </div>
-
-                                    <div class="w3-row">
-                                        <div class="w3-twothird w3-container">
-
-
-                                        </div>
-                                        <div class="bottomSection2">
-
-                                        </div>
-                                    </div>
-
-
-                                    <!-- Needs to be closed^^^ -->
-                                    <footer id="footer">
-
-                                        <div id="footer" ">
-                                          <p>
-                                              <center>A Website Created By The Disembodied Voices</center>
-                                          </p>
-                                      </div>
-                                  </footer>
-                          
-                                  <!-- END MAIN -->
-                              </div>
-                          
-                              <script src="./js/scripts.js "></script>
-                          </body>
+    <script src="./js/scripts.js "></script>
+</body>
 </html>
