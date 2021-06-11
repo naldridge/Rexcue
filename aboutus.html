@@ -1,62 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <a href="./index.html"> Home </a>
+    <link href="./css/about.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6308212b22.js" crossorigin="anonymous"></script>
+
+    <title>REXcue!</title>
+
 </head>
+
 <body>
-    <h1> About Us </h1>
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus laborum libero aspernatur eum excepturi dolore harum. Quaerat eligendi esse, amet officia iste tempore id neque, mollitia nulla ut saepe in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dignissimos ab quia aspernatur neque, facilis sequi perspiciatis debitis. Quo atque tenetur dolores. Esse non maiores beatae, mollitia fugiat doloremque ratione! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit consequatur ducimus ad quo ullam esse, mollitia aperiam, repellendus architecto nostrum iure, porro possimus. Earum doloremque ipsam modi, atque dolorum cumque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque alias nostrum recusandae dicta laboriosam. Adipisci quas similique tempore aut facere, provident dolor deleniti ratione accusantium harum accusamus velit, voluptatibus dolores.
-    </p>
-    
+    <div class="wrapper">
+        <div class="background">
+            <img id="dogs2" src="./images/dogsBlue.jpg">
+        </div>
+        <!-- Navbar -->
+        <div class="nav">
+            <div id="headerContent">
 
-    <div class="about-section">
-  
+                <div id="navLogo">
+                    <a id="logoLink" href="./index.html">
+                        <h1>RE</h1>
+                        <img id="rexLogo" src="./images/rex.png" alt="Rex Logo" style="width: 65px;" />
+                        <h1>cue!</h1>
+                    </a>
+                </div>
+                <div class="navbar">
+                    <div id="navLink">
 
-<h2 style="text-align:center">Our Team</h2>
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <img src="./brittanyheadshot.jpg" alt="brittany" style="width:20%" style="height: 20%">
-      <div class="container">
-        <h2>Brittany Fisher</h2>
-        <p class="title">Freelance Developer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>brittany@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
+                        <a href="./aboutus.html">About Us <i class="fas fa-users"></i></a>
+
+                    </div>
+                    <div id="navLink">
+
+                        <a href="./mission.html">Mission Statement <i class="fas fa-book"></i></a>
+
+                    </div>
+                    <div id="navLink">
+
+                        <a href="./adoption.html">Adoption <i class="fas fa-dog"></i></a>
+
+                    </div>
+                    <div id="navLink">
+                        <a href="./personality_quiz.html" class="right">Quiz <i class="far fa-edit"></i></a>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Sidebar -->
+        <div class="mainContainer">
+            <div id="container1">
+                <div class="menu">
+                    <p>
+                        <a class="linksMenuIcon" href="javascript:void(0)" onclick="w3_open()"><i
+                                class="fa fa-bars"></i></a> LINKS MENU
+                    </p>
+                    <nav class="sidebar" id="mySidebar">
+                        <a id="xSide" href="javascript:void(0)" onclick="w3_close()" class="" title="Close Menu">
+                            <i class="fa fa-remove"></i>
+                        </a>
+                        <h4 class="bar-item"><b></b></h4>
+                        <ul id="linksMenuBox">
+                            <li>
+                                <a class="" href="./breeds.html">Dog Breeds <i class="fas fa-bone"></i></a>
+                            </li>
+                            <li>
+                                <a class="" href="#">Shelters <i class="fas fa-home"></i></a>
+                            </li>
+                            <li>
+                                <a class="" href="./adoption.html">Adoption <i class="fas fa-dog"></i></a>
+                            </li>
+                            <li>
+                                <a class="dogJokModal" href="#">Dog Joke Modal <i class="fas fa-paw"></i></a>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+            <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+            <div id="container2">
+                <!-- Joke Modal -->
+                <div id="modalBox">
+                    <div id="overlay" class="modal__overlay">
+                        <div id="modal" class="modal__content">
+                            <h1>HEY MAN.......wanna hear a joke?</h1>
+                            <p></p>
+                            <img id="dogGif" src="./images/laughingdog.gif" alt="Laughing Dog">
+                            <button type="button" id="closeModal" class="modal__close">X</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Joke Modal -->
+                <div class="scroll-container">
+                    <div class="scrollContent">
+                        <center>
+                            <h1>Meet Our Team!</h1>
+                        </center>
+                        <!-- <h1>About Us</h1> -->
+                        <!-- <p>
+                                The team that made this project possible!
+                            </p> -->
+
+                        <div class="column">
+                            <div class="card1">
+                                <div id="contactImg">
+                                    <img src="images/brittanyheadshot.jpg" alt="brittany" style="width: 60%;" style="padding: 15px;">
+                                </div>
+                                <div id="contactContent">
+                                    <h2>Brittany</h2>
+                                    <p class="title ">Freelance Developer</p>
+                                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                                    <p>brittany@example.com</p>
+                                    <p><button class="button ">Contact</button></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="card2">
+                                <div id="contactContent">
+                                    <h2>Nick</h2>
+                                    <p class="title">JavaScript PHD</p>
+                                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                                    <p>mike@example.com</p>
+                                    <p><button class="button">Contact</button></p>
+                                </div>
+                                <div id="contactImg">
+                                    <img src="./images/laughingdog.gif" alt="Mike" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <class class="card3">
+                                <div id="contactImg">
+                                    <img id="zachImg" src="./images/zachandraider.jpg.PNG" alt="Zach and his Dog Raider" style="padding: 15px;">
+                                </div>
+                                <div id="contactContent">
+                                    <h2>Zach</h2>
+                                    <p class="title">Junior Software Developer</p>
+                                    <p>Zach's passion for adopting dogs goes back 20 years when he and his family adopted their first family dog. Since then, Zach has remained active at his local shelter in Dallas, TX where he helps spread the word that
+                                        adoption is better than going through puppy mills.</p>
+                                    <p>https://github.com/zach-a-g</p>
+
+                                    <center>
+                                        <p><button class="button">Contact</button></p>
+                                    </center>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
-      <div class="container">
-        <h2>Mike Ross</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
     </div>
-  </div>
+    <footer id="footer">
 
-  <div class="column">
-    <div class="card">
-      <img src="/w3images/team3.jpg" alt="John" style="width:100%">
-      <div class="container">
-        <h2>John Doe</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>john@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
+        <div id="footer" ">
+                <p>
+                    <center>A Website Created By The Disembodied Voices</center>
+                </p>
+            </div>
+        </footer>
+
+        <!-- END MAIN -->
     </div>
-  </div>
-</div>
+
+    <script src="./js/scripts.js "></script>
 </body>
 </html>
+
+
+
+                    <!-- <div class="mainContent ">
+                        <div class="welcomeSection ">
+                            <div class="welcomeContent ">
+                                <h1></h1>
+                                <p> </p>
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="quizSection ">
+                            <div class="quizContent ">
+                                <h1></h1>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="adoptSection ">
+                            <div class="adoptContent ">
+                                <h1></h1>
+                                <div id=" ">
+
+                                </div>
+                            </div>
+                        </div> -->

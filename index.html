@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
     <link href="./css/styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
@@ -25,28 +24,30 @@
             <div id="headerContent">
 
                 <div id="navLogo">
-                    <h1>RE</h1>
-                    <img id="rexLogo" src="./images/rex.png" alt="Rex Logo" style="width: 65px;" />
-                    <h1>cue!</h1>
+                    <a id="logoLink" href="./index.html">
+                        <h1>RE</h1>
+                        <img id="rexLogo" src="./images/rex.png" alt="Rex Logo" style="width: 65px;" />
+                        <h1>cue!</h1>
+                    </a>
                 </div>
                 <div class="navbar">
                     <div id="navLink">
 
-                        <a href="#">About Us</a>
+                        <a href="./aboutus.html">About Us <i class="fas fa-users"></i></a>
 
                     </div>
                     <div id="navLink">
 
-                        <a href="#">Mission Statement</a>
+                        <a href="./mission.html">Mission Statement <i class="fas fa-book"></i></a>
 
                     </div>
                     <div id="navLink">
 
-                        <a href="#">Adoption</a>
+                        <a href="./adoption.html">Adoption <i class="fas fa-dog"></i></a>
 
                     </div>
                     <div id="navLink">
-                        <a href="#" class="right">Quiz</a>
+                        <a href="./personality_quiz.html" class="right">Quiz <i class="far fa-edit"></i></a>
 
 
                     </div>
@@ -61,84 +62,108 @@
             <div id="container1">
                 <div class="menu">
                     <p>
-                        <a class="linksMenuIcon" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a> LINKS MENU
+                        <a class="linksMenuIcon" href="javascript:void(0)" onclick="w3_open()"><i
+                                class="fa fa-bars"></i></a> LINKS MENU
                     </p>
                     <nav class="sidebar" id="mySidebar">
                         <a id="xSide" href="javascript:void(0)" onclick="w3_close()" class="" title="Close Menu">
                             <i class="fa fa-remove"></i>
                         </a>
                         <h4 class="bar-item"><b></b></h4>
-                        <ul>
+                        <ul id="linksMenuBox">
                             <li>
-                                <a class="" href="#">Dog Breeds</a>
+                                <a class="" href="./breeds.html">Dog Breeds <i class="fas fa-bone"></i></a>
                             </li>
                             <li>
-                                <a class="" href="#">Shelters</a>
+                                <a class="" href="#">Shelters <i class="fas fa-home"></i></a>
                             </li>
                             <li>
-                                <a class="" href="#">Adoption</a>
+                                <a class="" href="./adoption.html">Adoption <i class="fas fa-dog"></i></a>
                             </li>
                             <li>
-                                <a class="" href="#">Dog Joke Modal</a>
+                                <a class="dogJokModal" href="#">Dog Joke Modal <i class="fas fa-paw"></i></a>
                             </li>
                         </ul>
+
                     </nav>
                 </div>
             </div>
+            <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+                id="myOverlay"></div>
 
             <div id="container2">
-                <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-                <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
-                <div class="mainContent">
-
-                    <div class="w3-row w3-padding-64">
-                        <div class="w3-twothird w3-container">
-                            <h1 class="w3-text-teal">Welcome to Rexcue!</h1>
-                            <p> (Describe what rexcue is all about? And how there is a misconseption about certain breeds.) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                        <div class="bottomSection1">
-
+                <!-- Joke Modal -->
+                <div id="modalBox">
+                    <div id="overlay" class="modal__overlay">
+                        <div id="modal" class="modal__content">
+                            <h1>HEY MAN.......wanna hear a joke?</h1>
+                            <p></p>
+                            <img id="dogGif" src="./images/laughingdog.gif" alt="Laughing Dog">
+                            <button type="button" id="closeModal" class="modal__close">X</button>
                         </div>
                     </div>
-
-                    <div class="w3-row">
-                        <div class="w3-twothird w3-container">
-                            <h1 class="w3-text-teal">Take our Personality Quiz!</h1>
-                            <p>(Describe our EXPERTLY CREATED quiz that will match you with your new best friend) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                        <div class="bottomSection2">
-
-                        </div>
-                    </div>
-
-                    <div class="adoptSection">
-                        <div class="adoptContent">
-                            <h1 class="w3-text-teal">Adoptable Furry Friends!</h1>
-                            <!-- <p>(Pictures go here. Set pictures to random adoptable dogs and have 5 on this page with a link to go to the adoption page.) </p> -->
-                            <div id="dogPics">
-
-
-                                <img id="adoptDog" src="./images/black lab.jpg" alt="blacklab" width="100px" height="100px">
-                                <img id="adoptDog" src="./images/cute dog laying down.jpg" alt="cute" width="100px" height="100px">
-                                <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
-                                <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
-                                <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
-                                <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
+                </div>
+                <!-- End of Joke Modal -->
+                <div class="scroll-container">
+                    <div class="mainContent">
+                        <div class="welcomeSection">
+                            <div class="welcomeContent">
+                                <h1>Welcome to Rexcue!</h1>
+                                <p> You have decided that it’s time to add a pet to your family. After some
+                                    consideration, you’ve fallen in love with a particular dog breed. Many people then
+                                    look for a dog breeder to make their purebred-pup dream come true.</p>
+                                <p>Like any responsible future pet parent, you still have some questions before you take
+                                    the plunge and choose your new dog, which may be why you’re here! Did you know that
+                                    there are LOTS of purebred dogs waiting for the perfect
+                                    forever home at shelters and rescue groups? Not only that, but there are also
+                                    special breed-rescue groups who dedicate their efforts to finding homes for just one
+                                    breed of dog.</p>
+                                <p>Dogs of every type and breed can end up in shelters. Before you start checking for a
+                                    breeder to find your next family pet, we recommend starting your search at your
+                                    local shelter where lots of good boys and good girls are
+                                    anxiously waiting to show you love!</p>
                             </div>
                         </div>
-                        <div class="bottomSection3">
 
+                        <div class="quizSection">
+                            <div class="quizContent">
+                                <h1>Take our Personality Quiz!</h1>
+                                <p>(Describe our EXPERTLY CREATED quiz that will match you with your new best friend)
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                    ex ea commodo consequat.</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Button -->
-                    <div class="w3-center w3-padding-32">
-                        <button class="button">Find Your Best Friend</button>
+                        <div class="adoptSection">
+                            <div class="adoptContent">
+                                <h1>Adoptable Furry Friends!</h1>
+                                <div id="dogPics">
+                                    <img id="adoptDog" src="./images/black lab.jpg" alt="blacklab" width="100px"
+                                        height="100px">
+                                    <img id="adoptDog" src="./images/cute dog laying down.jpg" alt="cute" width="100px"
+                                        height="100px">
+                                    <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px"
+                                        height="100px">
+                                    <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px"
+                                        height="100px">
+                                    <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px"
+                                        height="100px">
+                                    <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px"
+                                        height="100px">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="adoptButtonSection">
+                            <button class="button">Find Your New Best Friend Here!</button>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -155,6 +180,6 @@
         <!-- END MAIN -->
     </div>
 
-    </div>
+    <script src="js/brittany.js"></script>
 </body>
 </html>

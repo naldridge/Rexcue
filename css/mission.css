@@ -1,0 +1,369 @@
+    html {
+        height: 100%;
+        margin: auto;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    
+    * {
+        font-family: 'Antic Slab', serif;
+    }
+    
+    body {
+        margin: auto;
+        justify-content: center;
+        width: 100%;
+        /* min-width: 1055px; */
+        height: 100%;
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+    }
+    /* Top Navigation ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    
+    .nav {
+        display: flex;
+        background-color: white;
+        background-image: url(https://www.transparenttextures.com/patterns/gplay.png) !important;
+        width: 100%;
+        position: fixed;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        z-index: 4;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.295);
+    }
+    
+    #headerContent {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        width: 90%;
+        padding-bottom: 10px;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    div.navbar {
+        display: flex;
+        flex-direction: row-reverse;
+        align-content: center;
+        align-items: center;
+        list-style: none;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    #navLogo {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #logoLink {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    #navbar ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        align-items: center;
+        align-content: center;
+    }
+    
+    #navLink {
+        padding: 5px;
+    }
+    
+    div a {
+        color: #444;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+    
+    div a:hover {
+        color: #f06543;
+    }
+    
+    div a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background-color: #f06543;
+        position: sticky;
+        top: 0;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+    
+    div a:hover::before {
+        width: 100%;
+    }
+    
+    li {
+        padding: 5px;
+        margin-right: 10px;
+        list-style: none;
+    }
+    
+    h1 {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    /* Side Navigation Link Menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    
+    nav a {
+        color: #444;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+    
+    nav a:hover {
+        color: #f06543;
+    }
+    
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background-color: #f06543;
+        position: sticky;
+        top: 0;
+        width: 0%;
+        transition: all ease-in-out 250ms;
+    }
+    
+    nav a:hover::before {
+        width: 100%;
+    }
+    
+    .menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: sticky;
+        left: 0;
+        width: 150px;
+        height: 100%;
+        margin-left: 10%;
+        align-content: center;
+        align-items: center;
+        background-color: transparent;
+    }
+    
+    .bar-item {
+        list-style: none;
+    }
+    
+    #linksMenuBox {
+        padding-left: 0px;
+    }
+    /* Modal Overlay~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    
+    .modal__overlay {
+        background-color: #000;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        display: none;
+    }
+    
+    .modal__overlay.visible {
+        display: flex;
+    }
+    
+    .modal__content {
+        background-color: white;
+        display: flex;
+        margin: auto;
+        position: relative;
+        padding: 16px;
+        height: 500px;
+        width: 600px;
+        border-radius: 8px;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    
+    button.modal__close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 8px;
+        border: none;
+    }
+    
+    #modalBox {
+        z-index: 10;
+    }
+    
+    #dogGif {
+        display: flex;
+    }
+    
+    #modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-content: center; */
+        /* align-items: center; */
+    }
+    /* Main Middle Text Content ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    /* Scroll Nav ~~~~~~~~~~~~~~~~~~~~~ */
+    /* nav,
+    .scroll-container {
+        display: block;
+        margin: 0 auto;
+        text-align: left;
+    } */
+    
+    .scroll-container {
+        /* display: flex; */
+        width: 72%;
+        /* min-width: 780px; */
+        max-width: 1140px;
+        max-height: 690px;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        justify-content: center;
+    }
+    
+    .scroll-page {
+        display: flex;
+        height: 100%;
+    }
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    
+    .mainContent {
+        z-index: 3;
+    }
+    
+    .mainContainer {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+    }
+    
+    #container1 {
+        display: flex;
+        max-width: 15%;
+        flex-direction: column;
+        margin: 0;
+        margin-top: 90px;
+        align-self: flex-start;
+        position: fixed;
+    }
+    
+    #container2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1110px;
+        max-height: 690px;
+        margin: auto;
+        margin-top: 90px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    /* Background Pic ~~~~~~~~~~~ */
+    
+    #dogs2 {
+        display: flex;
+        border-radius: 0;
+        position: center center;
+        z-index: -1;
+        width: 70%;
+        max-width: 1140px;
+        min-width: 790px;
+        height: 100%;
+        min-height: 1248px;
+        max-height: 100%;
+        justify-content: center;
+        align-self: center;
+        align-content: center;
+        margin: auto;
+        border: 1px solid rgba(128, 128, 128, 0.295);
+    }
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    
+    .background {
+        display: flex;
+        height: 100%;
+        margin: auto;
+        position: absolute;
+        justify-content: center;
+        z-index: -1;
+        width: 100%;
+    }
+    
+    #footer {
+        height: 20px;
+        position: sticky;
+        /* background-color: #f06543; */
+        width: 100%;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        bottom: 0;
+    }
+    
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+    
+    .content {
+        flex-grow: 1;
+    }
+    
+    #dogPics {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+    }
+    
+    #adoptDog {
+        border-radius: 50%;
+        justify-content: space-between;
+    }
+    
+    #topNavIcon {
+        display: flex;
+    }
+    
+    .adoptButtonSection {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-top: 10px;
+    }
+    
+    .button {
+        border: 1px solid white;
+        border-radius: 3px;
+        width: 40%;
+        height: 50px;
+        color: white;
+        background-color: yellowgreen;
+        font-size: larger;
+        margin-bottom: 10px;
+    }
+    
+    .missionContent {
+        width: 100%;
+    }

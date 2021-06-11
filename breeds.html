@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/breeds.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6308212b22.js" crossorigin="anonymous"></script>
+
+    <title>REXcue!</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="background">
+            <img id="dogs2" src="./images/dogsBlue.jpg">
+        </div>
+        <!-- Navbar -->
+        <div class="nav">
+            <div id="headerContent">
+
+                <div id="navLogo">
+                    <a id="logoLink" href="./index.html">
+                        <h1>RE</h1>
+                        <img id="rexLogo" src="./images/rex.png" alt="Rex Logo" style="width: 65px;" />
+                        <h1>cue!</h1>
+                    </a>
+                </div>
+                <div class="navbar">
+                    <div id="navLink">
+
+                        <a href="./aboutus.html">About Us <i class="fas fa-users"></i></a>
+
+                    </div>
+                    <div id="navLink">
+
+                        <a href="./mission.html">Mission Statement <i class="fas fa-book"></i></a>
+
+                    </div>
+                    <div id="navLink">
+
+                        <a href="./adoption.html">Adoption <i class="fas fa-dog"></i></a>
+
+                    </div>
+                    <div id="navLink">
+                        <a href="./personality_quiz.html" class="right">Quiz <i class="far fa-edit"></i></a>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Sidebar -->
+        <div class="mainContainer">
+            <div id="container1">
+                <div class="menu">
+                    <p>
+                        <a class="linksMenuIcon" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a> LINKS MENU
+                    </p>
+                    <nav class="sidebar" id="mySidebar">
+                        <a id="xSide" href="javascript:void(0)" onclick="w3_close()" class="" title="Close Menu">
+                            <i class="fa fa-remove"></i>
+                        </a>
+                        <h4 class="bar-item"><b></b></h4>
+                        <ul id="linksMenuBox">
+                            <li>
+                                <a class="" href="./breeds.html">Dog Breeds <i class="fas fa-bone"></i></a>
+                            </li>
+                            <li>
+                                <a class="" href="#">Shelters <i class="fas fa-home"></i></a>
+                            </li>
+                            <li>
+                                <a class="" href="./adoption.html">Adoption <i class="fas fa-dog"></i></a>
+                            </li>
+                            <li>
+                                <a class="dogJokModal" href="#">Dog Joke Modal <i class="fas fa-paw"></i></a>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+            <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+            <div id="container2">
+                <!-- Joke Modal -->
+                <div id="modalBox">
+                    <div id="overlay" class="modal__overlay">
+                        <div id="modal" class="modal__content">
+                            <h1>HEY MAN.......wanna hear a joke?</h1>
+                            <p></p>
+                            <img id="dogGif" src="./images/laughingdog.gif" alt="Laughing Dog">
+                            <button type="button" id="closeModal" class="modal__close">X</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Joke Modal -->
+
+                <div class="scroll-container">
+                    <div class="mainContent">
+                        <div class="breedsSection">
+                            <div id="breedsContent">
+                                <h1>Find The Perfect Breed For You!</h1>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="adoptButtonSection">
+                            <button class="button">Find Your New Best Friend Here!</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <footer id="footer">
+
+            <div id="footer" ">
+                <p>
+                    <center>A Website Created By The Disembodied Voices</center>
+                </p>
+            </div>
+        </footer> -->
+
+        <!-- END MAIN -->
+    </div>
+
+    <script src="./js/breeds.js "></script>
+</body>
+
+</html>
