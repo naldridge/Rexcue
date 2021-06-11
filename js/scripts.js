@@ -1,9 +1,6 @@
 `use strict`
 
 
-
-
-
 /* 
 document.addEventListener('DOMContentLoaded', function () {
     fetch()
@@ -19,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
 
 }); */
-
+//Style the Personality Quiz input selections
 const inputs = document.querySelectorAll('input');
 const showMeButton = document.getElementById('showMe');
 const quizResults = document.getElementById('quizResults');
@@ -41,18 +38,19 @@ function showResults() {
     const answeredArray = resultsArray.filter(function () { return true });
     const newUser = createUser(answeredArray);
     
-
+    //compares Dog Personality traits against User Personality traits
     let match = Dogs.find(match => match.traitValue1 === answeredArray[0]
         && match.traitValue2 === answeredArray[1]
         && match.traitValue3 === answeredArray[2]
         && match.traitValue4 === answeredArray[3]
         && match.traitValue5 === answeredArray[4]);
 
+    //shows comparison match if True, else shows no match
     function showMatch() {
         if (Boolean(match)) {
             let matchBreed = match.breed;
             console.log("match is: ", match.breed);
-            quizResults.innerText =  matchBreed;
+            quizResults.innerText =  "Your match is: " + matchBreed;
             return match;
         } else {
             console.log("no match found");
@@ -144,22 +142,7 @@ let Dogs = [
         "traitValue5": "",
     }, */
 ]
-/* class Dog {
-    constructor(breed, traitValue1, traitValue2, traitValue3, traitValue4, traitValue5) {
-        this.breed = breed;
-        //this.traitValueArray = traitValueArray;
-        this.traitValue1 = traitValue1;
-        this.traitValue2 = traitValue2;
-        this.traitValue3 = traitValue3;
-        this.traitValue4 = traitValue4;
-        this.traitValue5 = traitValue5;
-    };
 
-    updateBreedArray() {
-        breedArray.push(Object.values(this));
-    };
-
-}; */
 
 class User {
     traitvalues = []
@@ -169,11 +152,6 @@ class User {
     }
 };
 
-/* let dog1 = new Dog('Jack Russell Terrier', '3', '3', '5', '2', '4').updateBreedArray();
-let dog2 = new Dog('American Bulldog', '2', '2', '5', '2', '5').updateBreedArray();
-let dog3 = new Dog('Great Dane', '2', '4', '2', '4', '3').updateBreedArray();
-let dog4 = new Dog('Chihuahua', '1', '5', '1', '4', '5').updateBreedArray();
-let dog5 = new Dog('German Shepherd', '5', '1', '5', '5', '5').updateBreedArray(); */
 
 
 
@@ -185,4 +163,29 @@ let dog5 = new Dog('German Shepherd', '5', '1', '5', '5', '5').updateBreedArray(
 
 
 
+
+
+
+// Get the Sidebar
+const mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+const overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
 
