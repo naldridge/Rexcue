@@ -1,21 +1,16 @@
 `use strict`
 
-
-const petfinder_api = `paW772Z8rRxE4cotRZKS9AyFJ2L89ODqmLBlOsOp2T8CzUruit`
-const secret_key = `uoT0TLvaAGd0GTYghEWnvnGFUPD65JCeoeLZKytn`
-
-
 // Build breed list ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function buildBreeds(data) {
     const breedList = data.message;
-    const breedsContentEl = document.querySelector('#breedsContent');
-    // console.log("breedList is: ", breedList);
+    const breedsContentEl = document.querySelector('.breedsContent');
+    console.log("breedList is: ", breedList);
     const breedUl = document.createElement(`ul`);
     Object.entries(breedList).forEach(function(breed) {
         const breedItem = document.createElement(`p`);
         breedItem.innerText = breed[0];
         breedUl.appendChild(breedItem);
-        // console.log(breed[0]);
+        console.log(breed[0]);
     });
     breedsContentEl.append(breedUl)
 }
@@ -27,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
             return response.json();
         })
         .then(function(data) {
-            // console.log("the data is: ", data);
-            // console.log("the message is: ", data.message);
+            console.log("the data is: ", data);
+            console.log("the message is: ", data.message);
             buildBreeds(data);
 
         })
@@ -61,26 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Get the Sidebar~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const mySidebar = document.getElementById("mySidebar");
-
-// Get the DIV with overlay effect
-const overlayBg = document.getElementById("myOverlay");
-
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function w3_open() {
-    if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-        overlayBg.style.display = "none";
-    } else {
-        mySidebar.style.display = 'block';
-        overlayBg.style.display = "block";
-    }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-    overlayBg.style.display = "none";
-}
 
 // Joke Modal ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function toggleModal() {

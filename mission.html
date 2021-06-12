@@ -17,7 +17,7 @@
 <body>
     <div class="wrapper">
         <div class="background">
-            <img id="dogs2" src="./images/dogsBlue.jpg">
+
         </div>
         <!-- Navbar -->
         <div class="nav">
@@ -48,105 +48,90 @@
                     </div>
                     <div id="navLink">
                         <a href="./personality_quiz.html" class="right">Quiz <i class="far fa-edit"></i></a>
-
-
                     </div>
                 </div>
             </div>
-
         </div>
 
 
         <!-- Sidebar -->
-        <div class="mainContainer">
-            <div id="container1">
-                <div class="menu">
-                    <p>
-                        <a class="linksMenuIcon" href="javascript:void(0)" onclick="w3_open()"><i
-                                class="fa fa-bars"></i></a> LINKS MENU
-                    </p>
-                    <nav class="sidebar" id="mySidebar">
-                        <a id="xSide" href="javascript:void(0)" onclick="w3_close()" class="" title="Close Menu">
-                            <i class="fa fa-remove"></i>
-                        </a>
-                        <h4 class="bar-item"><b></b></h4>
-                        <ul id="linksMenuBox">
-                            <li>
-                                <a class="" href="./breeds.html">Dog Breeds <i class="fas fa-bone"></i></a>
-                            </li>
-                            <li>
-                                <a class="" href="#">Shelters <i class="fas fa-home"></i></a>
-                            </li>
-                            <li>
-                                <a class="" href="./adoption.html">Adoption <i class="fas fa-dog"></i></a>
-                            </li>
-                            <li>
-                                <a class="dogJokModal" href="#">Dog Joke Modal <i class="fas fa-paw"></i></a>
-                            </li>
-                        </ul>
+        <div class="mainContainer ">
+            <div id="container1 ">
+                <ul id="linksMenuBox ">
+                    <li style="margin: 0px; justify-content: center; ">
+                        <a class=" " href="./breeds.html ">Dog Breeds <i class="fas fa-bone "></i></a>
+                    </li>
+                    <li style="margin: 0px; justify-content: center; ">
+                        <a class=" " href="# ">Shelters <i class="fas fa-home "></i></a>
+                    </li>
 
-                    </nav>
-                </div>
+                    <li style="margin: 0px; justify-content: center; ">
+                        <a class="dogJokModal " href="# ">Dog Joke Modal <i class="fas fa-paw "></i></a>
+                    </li>
+                </ul>
+
+                </nav>
             </div>
-            <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+        </div>
+        <div class="w3-overlay w3-hide-large " onclick="w3_close() " style="cursor:pointer " title="close side menu " id="myOverlay "></div>
 
-            <div id="container2">
-                <!-- Joke Modal -->
-                <div id="modalBox">
-                    <div id="overlay" class="modal__overlay">
-                        <div id="modal" class="modal__content">
-                            <h1>HEY MAN.......wanna hear a joke?</h1>
-                            <p></p>
-                            <img id="dogGif" src="./images/laughingdog.gif" alt="Laughing Dog">
-                            <button type="button" id="closeModal" class="modal__close">X</button>
-                        </div>
+        <div id="container2">
+            <!-- Joke Modal -->
+            <div id="modalBox">
+                <div id="overlay" class="modal__overlay">
+                    <div id="modal" class="modal__content">
+                        <h1>HEY MAN.......wanna hear a joke?</h1>
+                        <p></p>
+                        <img id="dogGif" src="./images/laughingdog.gif" alt="Laughing Dog">
+                        <button type="button" id="closeModal" class="modal__close">X</button>
                     </div>
                 </div>
-                <!-- End of Joke Modal -->
-                <div class="scroll-container">
-                    <div class="mainContent">
-                        <div class="missionSection">
-                            <div class="missionContent">
-                                <center>
-                                    <h1>Our Mission</h1>
-                                </center>
-                                <p>To use Internet technology and the resources it can generate to:</p>
-                                <ul>
-                                    <li>
-                                        Increase public awareness of the availability of high-quality adoptable pets
-                                    </li>
-                                    <li>
-                                        Increase the overall effectiveness of pet adoption programs across North America to the extent that the euthanasia of adoptable pets is eliminated
-                                    </li>
-                                    <li>
-                                        Elevate the status of pets to that of family member
-                                    </li>
-                                </ul>
-                                <p>From the comfort of their personal computers, pet lovers can search for a pet that best matches their needs. They can then reference a shelter’s web page and discover what services it offers. Rexcue will soon include discussion
-                                    forums, a pet-care resource directory and a library of free pet-care articles to help keep pets in their homes.</p>
+            </div>
+            <!-- End of Joke Modal -->
+            <div class="scroll-container">
+                <div class="mainContent">
+                    <div class="missionSection">
+                        <div class="missionContent">
+                            <center>
+                                <h1>Our Mission</h1>
+                            </center>
+                            <p>To use Internet technology and the resources it can generate to:</p>
+                            <ul>
+                                <li>
+                                    Increase public awareness of the availability of high-quality adoptable pets
+                                </li>
+                                <li>
+                                    Increase the overall effectiveness of pet adoption programs across North America to the extent that the euthanasia of adoptable pets is eliminated
+                                </li>
+                                <li>
+                                    Elevate the status of pets to that of family member
+                                </li>
+                            </ul>
+                            <p>From the comfort of their personal computers, pet lovers can search for a pet that best matches their needs. They can then reference a shelter’s web page and discover what services it offers. Rexcue will soon include discussion
+                                forums, a pet-care resource directory and a library of free pet-care articles to help keep pets in their homes.</p>
 
-                            </div>
                         </div>
-                        <div class="adoptSection">
-                            <div class="adoptContent">
-                                <h1>Adoptable Furry Friends!</h1>
-                                <div id="dogPics">
-                                    <img id="adoptDog" src="./images/black lab.jpg" alt="blacklab" width="100px" height="100px">
-                                    <img id="adoptDog" src="./images/cute dog laying down.jpg" alt="cute" width="100px" height="100px">
-                                    <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
-                                    <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
-                                    <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
-                                    <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
-                                </div>
+                    </div>
+                    <div class="adoptSection">
+                        <div class="adoptContent">
+                            <h1>Adoptable Furry Friends!</h1>
+                            <div id="dogPics">
+                                <img id="adoptDog" src="./images/black lab.jpg" alt="blacklab" width="100px" height="100px">
+                                <img id="adoptDog" src="./images/cute dog laying down.jpg" alt="cute" width="100px" height="100px">
+                                <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
+                                <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
+                                <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
+                                <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer id="footer">
+    </div>
+    <footer id="footer">
 
-            <div id="footer" ">
+        <div id="footer" ">
                 <p>
                     <center>A Website Created By The Disembodied Voices</center>
                 </p>
@@ -159,3 +144,105 @@
     <script src="./js/scripts.js "></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div id="container2 ">
+                <!-- Joke Modal -->
+                <div id="modalBox ">
+                    <div id="overlay " class="modal__overlay ">
+                        <div id="modal " class="modal__content ">
+                            <h1>HEY MAN.......wanna hear a joke?</h1>
+                            <p></p>
+                            <img id="dogGif " src="./images/laughingdog.gif " alt="Laughing Dog ">
+                            <button type="button " id="closeModal " class="modal__close ">X</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Joke Modal -->
+                <div class="scroll-container ">
+                    <div class="mainContent ">
+                        <div class="welcomeSection ">
+                            <div class="welcomeContent ">
+                                <center>
+                                    <h1>Welcome to Rexcue!</h1>
+                                </center>
+                                <p> You have decided that it’s time to add a pet to your family. After some consideration, you’ve fallen in love with a particular dog breed. Many people then look for a dog breeder to make their purebred-pup dream come true.</p>
+                                <p>Like any responsible future pet parent, you still have some questions before you take the plunge and choose your new dog, which may be why you’re here! Did you know that there are LOTS of purebred dogs waiting for the perfect
+                                    forever home at shelters and rescue groups? Not only that, but there are also special breed-rescue groups who dedicate their efforts to finding homes for just one breed of dog.</p>
+                                <p>Dogs of every type and breed can end up in shelters. Before you start checking for a breeder to find your next family pet, we recommend starting your search at your local shelter where lots of good boys and good girls are
+                                    anxiously waiting to show you love!</p>
+                            </div>
+                        </div>
+
+                        <div class="quizSection ">
+                            <div class="quizContent ">
+                                <center>
+                                    <h1>Take our Personality Quiz!</h1>
+                                </center>
+                                <p>Are you unsure on what which breed of dog you would like to adopt? No worries! Our team here at Rexcue has you covered with our highly comprehensive personality quiz! After answering a few short questions on your own personality,
+                                    we link you with a specific breed of dogs that would be a perfect match for you and your family!
+                                </p>
+                                <div id="quizButton ">
+                                    <button id="goToQuiz " type="button " style="color: white; "><a href="./personality_quiz.html ">Take The Quiz!</a></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="adoptSection ">
+                            <div class="adoptContent ">
+                                <center>
+                                    <h1>Adoptable Furry Friends!</h1>
+                                </center>
+                                <div id="dogPics ">
+                                    <div id="adoptDog1 " src=" " alt="doggo " width="100px " height="100px " style="border-radius: 50%; "></div>
+                                    <div id="adoptDog2 " src=" " alt="doggo " width="100px " height="100px " style="border-radius: 50%; "></div>
+                                    <div id="adoptDog3 " src=" " alt="doggo " width="100px " height="100px " style="border-radius: 50%; "></div>
+                                    <div id="adoptDog4 " src=" " alt="doggo " width="100px " height="100px " style="border-radius: 50%; "></div>
+                                    <div id="adoptDog5 " src=" " alt="doggo " width="100px " height="100px " style="border-radius: 50%; "></div>
+                                    <div id="adoptDog6 " src=" " alt="doggo " width="100px " height="100px " style="border-radius: 50%; "></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div id="adoptButton ">
+                            <button id="goToAdopt " type="button "><a href="./adoption.html ">Find Your New Best Friend Here!</a></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer ">
+
+            <div id="footer " ">
+            <p>
+                <center>A Website Created By The Disembodied Voices</center>
+            </p>
+        </div>
+    </footer>
+
+    <!-- END MAIN -->
+    </div>
+
+    <script src="js/brittany.js "></script>
+</body>
