@@ -17,7 +17,7 @@
 <body>
     <div class="wrapper">
         <div class="background">
-            <img id="dogs2" src="./images/dogsBlue.jpg">
+
         </div>
         <!-- Navbar -->
         <div class="nav">
@@ -61,25 +61,18 @@
         <div class="mainContainer">
             <div id="container1">
                 <div class="menu">
-                    <p>
-                        <a class="linksMenuIcon" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a> LINKS MENU
-                    </p>
+
                     <nav class="sidebar" id="mySidebar">
-                        <a id="xSide" href="javascript:void(0)" onclick="w3_close()" class="" title="Close Menu">
-                            <i class="fa fa-remove"></i>
-                        </a>
-                        <h4 class="bar-item"><b></b></h4>
+
                         <ul id="linksMenuBox">
-                            <li>
+                            <li style="margin: 0px; justify-content: center;">
                                 <a class="" href="./breeds.html">Dog Breeds <i class="fas fa-bone"></i></a>
                             </li>
-                            <li>
+                            <li style="margin: 0px; justify-content: center;">
                                 <a class="" href="#">Shelters <i class="fas fa-home"></i></a>
                             </li>
-                            <li>
-                                <a class="" href="./adoption.html">Adoption <i class="fas fa-dog"></i></a>
-                            </li>
-                            <li>
+
+                            <li style="margin: 0px; justify-content: center;">
                                 <a class="dogJokModal" href="#">Dog Joke Modal <i class="fas fa-paw"></i></a>
                             </li>
                         </ul>
@@ -91,47 +84,55 @@
 
             <div id="container2">
                 <!-- Joke Modal -->
-                <div id="modalBox">
+                <!-- <div id="modalBox">
                     <div id="overlay" class="modal__overlay">
                         <div id="modal" class="modal__content">
-                            <h1>HEY MAN.......wanna hear a joke?</h1>
+                            <center>
+                                <h1>HEY MAN.......wanna hear a joke?</h1>
+                            </center>
                             <p></p>
-                            <img id="dogGif" src="./images/laughingdog.gif" alt="Laughing Dog">
+                            <img id="dogGif" src="./images/laughingdog.gif" alt="Laughing Dog" style="width: 50%;">
                             <button type="button" id="closeModal" class="modal__close">X</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- End of Joke Modal -->
-
+                <center>
+                    <h1 id="findBreed">Find The Perfect Breed For You!</h1>
+                </center>
                 <div class="scroll-container">
                     <div class="mainContent">
                         <div class="breedsSection">
-                            <div id="breedsContent">
-                                <h1>Find The Perfect Breed For You!</h1>
+                            <div class="breedsContent">
+
                                 <p></p>
                             </div>
                         </div>
-
-                        <!-- Button -->
-                        <div class="adoptButtonSection">
-                            <button class="button">Find Your New Best Friend Here!</button>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <footer id="footer">
-
-            <div id="footer" ">
-                <p>
-                    <center>A Website Created By The Disembodied Voices</center>
-                </p>
-            </div>
-        </footer> -->
-
-        <!-- END MAIN -->
     </div>
+
+
+    <!-- <div class="adoptSection">
+                            <div class="adoptContent">
+                                <h1>Adoptable Furry Friends!</h1>
+                                <div id="dogPics">
+                                    <img id="adoptDog" src="./images/black lab.jpg" alt="blacklab" width="100px" height="100px">
+                                    <img id="adoptDog" src="./images/cute dog laying down.jpg" alt="cute" width="100px" height="100px">
+                                    <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
+                                    <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
+                                    <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
+                                    <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+    <!-- <div class="adoptButtonSection">
+        <button class="button">Find Your New Best Friend Here!</button>
+    </div> -->
 
     <script src="./js/breeds.js "></script>
 </body>

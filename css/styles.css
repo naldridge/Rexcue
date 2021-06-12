@@ -156,7 +156,6 @@ nav a:hover::before {
     height: 100%;
     align-content: center;
     align-items: center;
-   
 }
 
 .bar-item {
@@ -167,9 +166,11 @@ nav a:hover::before {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* flex-wrap: wrap; */
 }
-
 
 
 /* Modal Overlay~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -241,8 +242,6 @@ nav,
     text-align: left;
 }
 
-
-
 .scroll-page {
     display: flex;
     height: 100%;
@@ -259,9 +258,9 @@ nav,
 .mainContainer {
     display: flex;
     flex-direction: row;
-   flex-wrap: wrap;
-   margin: 90px auto 0;
-   max-width: 790px;
+    flex-wrap: wrap;
+    margin: 90px auto 0;
+    max-width: 790px;
 }
 
 #container1 {
@@ -281,10 +280,12 @@ nav,
     align-items: center;
     align-content: center;
 }
-#container2 img{
+
+#container2 img {
     width: 100%;
     height: auto;
 }
+
 
 /* Background Pic ~~~~~~~~~~~ */
 
@@ -358,6 +359,7 @@ nav,
     width: 100px;
     height: 100px;
 }
+
 #adoptDog {
     border-radius: 50%;
     justify-content: space-between;
@@ -387,4 +389,34 @@ nav,
 
 .missionContent {
     width: 100%;
+}
+
+#quizButton {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+#goToQuiz {
+    width: 80%;
+    color: white;
+    background-color: yellowgreen;
+    border: 1px solid white;
+    border-radius: 3px;
+    height: 40px;
+}
+
+#adoptButton {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+#goToAdopt {
+    width: 80%;
+    color: white;
+    background-color: yellowgreen;
+    border: 1px solid white;
+    border-radius: 3px;
+    height: 40px;
 }
