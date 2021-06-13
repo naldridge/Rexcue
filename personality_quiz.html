@@ -16,7 +16,7 @@
 <body>
     <div class="wrapper">
         <div class="background">
-            <img id="dogs2" src="./images/dogsBlue.jpg">
+
         </div>
         <!-- Navbar -->
         <div class="nav">
@@ -60,207 +60,204 @@
         <div class="mainContainer">
             <div id="container1">
                 <div class="menu">
-                    <p>
-                        <a class="linksMenuIcon" href="javascript:void(0)" onclick="w3_open()"><i
-                                class="fa fa-bars"></i></a> LINKS MENU
-                    </p>
                     <nav class="sidebar" id="mySidebar">
-                        <a id="xSide" href="javascript:void(0)" onclick="w3_close()" class="" title="Close Menu">
-                            <i class="fa fa-remove"></i>
-                        </a>
-                        <h4 class="bar-item"><b></b></h4>
                         <ul id="linksMenuBox">
-                            <li>
-                                <a class="" href="#">Dog Breeds <i class="fas fa-bone"></i></a>
+                            <li style="margin: 0px; justify-content: center;">
+                                <a class="" href="./breeds.html">Dog Breeds <i class="fas fa-bone"></i></a>
                             </li>
-                            <li>
-                                <a class="" href="#">Shelters <i class="fas fa-home"></i></a>
+                            <li style="margin: 0px; justify-content: center;">
+                                <a class="" href="./shelter.html">Shelters <i class="fas fa-home"></i></a>
                             </li>
-                            <li>
-                                <a class="" href="#">Adoption <i class="fas fa-dog"></i></a>
-                            </li>
-                            <li>
-                                <a class="" href="#">Dog Joke Modal <i class="fas fa-paw"></i></a>
+
+                            <li style="margin: 0px; justify-content: center;">
+                                <a class="dogJokModal" href="./joke.html">Dog Joke Modal <i class="fas fa-paw"></i></a>
                             </li>
                         </ul>
+
                     </nav>
                 </div>
             </div>
-
-
             <div id="container2">
-                <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-                <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
                 <div class="mainContent">
+                    <h2 style="text-align:center">Personality Quiz </h2>
+                    <div id="quizContainer">
+                        <form id="personalityQuiz">
+                            <fieldset>
+                                <!-- <Legend>Which dog breed are you?</Legend> -->
 
-                    <div class="w3-row w3-padding-64">
-                        <div class="w3-twothird w3-container">
+                                <center>
+                                    <div id="questions"> Do you prefer the country life over the city life? <br>
+                                        <center>
+                                            <div id="answerLine">
+                                                <label class="question1">
+                                            <input type="radio" name="question1" value="1" />
+                                            Not at all
+                                            </label>
+                                                <label class="question1">
+                                            <input type="radio" name="question1" value="2" />
+                                            A little bit
+                                            </label>
+                                                <label class="question1">
+                                            <input type="radio" name="question1" value="3" />
+                                            I'm flexible
+                                            </label>
+                                                <label class="question1">
+                                            <input type="radio" name="question1" value="4" />
+                                            Mostly
+                                            </label>
+                                                <label class="question1">
+                                            <input type="radio" name="question1" value="5" />
+                                            Absolutely
+                                            </label>
+                                            </div>
+                                        </center>
+                                    </div>
+                                </center>
+                                <center>
+                                    <div id="questions"> How obsessive are you about cleaning? <br>
+                                        <div id="answerLine">
+                                            <label class="question2">
+                                                <input type="radio" name="question2" value="1" />
+                                                Not at all
+                                            </label>
+                                            <label class="question2">
+                                                <input type="radio" name="question2" value="2" />
+                                                A little bit
+                                            </label>
+                                            <label class="question2">
+                                                <input type="radio" name="question2" value="3" />
+                                                I'm flexible
+                                            </label>
+                                            <label class="question2">
+                                                <input type="radio" name="question2" value="4" />
+                                                Mostly
+                                            </label>
+                                            <label class="question2">
+                                                <input type="radio" name="question2" value="5" />
+                                                Extremely
+                                            </label>
+                                        </div>
+                                    </div>
+                                </center>
 
-                            <h2 style="text-align:center">Personality Quiz </h2>
-                            <div class="row">
-                                <div class="column">
-                                    <div class="card">
+                                <center>
+                                    <div id="questions"> Do you live an active lifestyle over a sedate lifestyle? <br>
+                                        <div id="answerLine">
+                                            <label class="question3">
+                                                <input type="radio" name="question3" value="1" />
+                                                Not at all
+                                                </label>
+                                            <label class="question3">
+                                                <input type="radio" name="question3" value="2" />
+                                                A little bit
+                                                </label>
+                                            <label class="question3">
+                                                <input type="radio" name="question3" value="3" />
+                                                I'm flexible
+                                                </label>
+                                            <label class="question3">
+                                                <input type="radio" name="question3" value="4" />
+                                                Mostly
+                                                </label>
+                                            <label class="question3">
+                                                <input type="radio" name="question3" value="5" />
+                                                Absolutely
+                                                </label>
+                                        </div>
+                                    </div>
+                                </center>
 
-                                        <div class="container">
-</body>
+                                <center>
+                                    <div id="questions"> Do you consider yourself empathetic, naturally a confidant in your social circle? <br>
+                                        <div id="answerLine">
+                                            <label class="question4">
+                                                <input type="radio" name="question4" value="1" />
+                                                Not at all
+                                                </label>
+                                            <label class="question4">
+                                                <input type="radio" name="question4" value="2" />
+                                                A little bit
+                                                </label>
+                                            <label class="question4">
+                                                <input type="radio" name="question4" value="3" />
+                                                I'm flexible
+                                                </label>
+                                            <label class="question4">
+                                                <input type="radio" name="question4" value="4" />
+                                                Mostly
+                                                </label>
+                                            <label class="question4">
+                                                <input type="radio" name="question4" value="5" />
+                                                Absolutely
+                                                </label>
+                                        </div>
+                                    </div>
+                                </center>
 
-</html>
-</div>
-<div class="bottomSection1">
+                                <center>
+                                    <div id="questions"> Do you consider yourself protective of your friends and family? <br>
+                                        <div id="answerLine">
+                                            <label class="question5">
+                                                <input type="radio" name="question5" value="1" />
+                                                Not at all
+                                                </label>
+                                            <label class="question5">
+                                                <input type="radio" name="question5" value="2" />
+                                                A little bit
+                                                </label>
+                                            <label class="question5">
+                                                <input type="radio" name="question5" value="3" />
+                                                I'm flexible
+                                                </label>
+                                            <label class="question5">
+                                                <input type="radio" name="question5" value="4" />
+                                                Mostly
+                                                </label>
+                                            <label class="question5">
+                                                <input type="radio" name="question5" value="5" />
+                                                Absolutely
+                                                </label>
+                                        </div>
+                                    </div>
+                                </center>
 
-</div>
-</div>
+                                <div id="showMe">
+                                    <button type="button" id="showMeButton">Show Results</button>
+                                </div>
+                            </fieldset>
 
-<div class="w3-row">
-    <div class="w3-twothird w3-container">
+                        </form>
+                    </div>
+                    <center>
+                        <div id="quizResults"></div>
+                    </center>
 
+                    {% comment %} insert card photos to show dogs that match the list of breeds listed {% endcomment %}
 
+                    <center>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                    </center>
+                    </div>
+                </div>
+                <footer id="footer">
+
+                    <div id="footer" ">
+                <p>
+                    <center>A Website Created By The Disembodied Voices</center>
+                </p>
+            </div>
+        </footer>
+
+        <!-- END MAIN -->
     </div>
-    <div class="bottomSection2">
 
-    </div>
-</div>
-
-</html>
-
-<body>
-    <div id="quizContainer">
-        <form id="personalityQuiz">
-            <fieldset>
-                <Legend>Which dog breed are you?</Legend>
-                <div> Do you prefer the country life over the city life? <br>
-                    <label class="question1">
-                        <input type="radio" name="question1" value="1" />
-                        Not at all
-                    </label>
-                    <label class="question1">
-                        <input type="radio" name="question1" value="2" />
-                        A little bit
-                    </label>
-                    <label class="question1">
-                        <input type="radio" name="question1" value="3" />
-                        I'm flexible
-                    </label>
-                    <label class="question1">
-                        <input type="radio" name="question1" value="4" />
-                        Mostly
-                    </label>
-                    <label class="question1">
-                        <input type="radio" name="question1" value="5" />
-                        Absolutely
-                    </label>
-                </div>
-                <div> How obsessive are you about cleaning? <br>
-                    <label class="question2">
-                        <input type="radio" name="question2" value="1" />
-                        Not at all
-                    </label>
-                    <label class="question2">
-                        <input type="radio" name="question2" value="2" />
-                        A little bit
-                    </label>
-                    <label class="question2">
-                        <input type="radio" name="question2" value="3" />
-                        I'm flexible
-                    </label>
-                    <label class="question2">
-                        <input type="radio" name="question2" value="4" />
-                        Mostly
-                    </label>
-                    <label class="question2">
-                        <input type="radio" name="question2" value="5" />
-                        Extremely
-                    </label>
-                </div>
-                <div> Do you live an active lifestyle over a sedate lifestyle? <br>
-                    <label class="question3">
-                        <input type="radio" name="question3" value="1" />
-                        Not at all
-                    </label>
-                    <label class="question3">
-                        <input type="radio" name="question3" value="2" />
-                        A little bit
-                    </label>
-                    <label class="question3">
-                        <input type="radio" name="question3" value="3" />
-                        I'm flexible
-                    </label>
-                    <label class="question3">
-                        <input type="radio" name="question3" value="4" />
-                        Mostly
-                    </label>
-                    <label class="question3">
-                        <input type="radio" name="question3" value="5" />
-                        Absolutely
-                    </label>
-                </div>
-                <div> Do you consider yourself empathetic, naturally a confidant in your social circle? <br>
-                    <label class="question4">
-                        <input type="radio" name="question4" value="1" />
-                        Not at all
-                    </label>
-                    <label class="question4">
-                        <input type="radio" name="question4" value="2" />
-                        A little bit
-                    </label>
-                    <label class="question4">
-                        <input type="radio" name="question4" value="3" />
-                        I'm flexible
-                    </label>
-                    <label class="question4">
-                        <input type="radio" name="question4" value="4" />
-                        Mostly
-                    </label>
-                    <label class="question4">
-                        <input type="radio" name="question4" value="5" />
-                        Absolutely
-                    </label>
-                </div>
-                <div> Do you consider yourself protective of your friends and family? <br>
-                    <label class="question5">
-                        <input type="radio" name="question5" value="1" />
-                        Not at all
-                    </label>
-                    <label class="question5">
-                        <input type="radio" name="question5" value="2" />
-                        A little bit
-                    </label>
-                    <label class="question5">
-                        <input type="radio" name="question5" value="3" />
-                        I'm flexible
-                    </label>
-                    <label class="question5">
-                        <input type="radio" name="question5" value="4" />
-                        Mostly
-                    </label>
-                    <label class="question5">
-                        <input type="radio" name="question5" value="5" />
-                        Absolutely
-                    </label>
-                </div>
-                <button type="button" id="showMe">Show Results</button>
-
-            </fieldset>
-
-        </form>
-    </div>
-    <div id="quizResults"></div>
-
-    {% comment %} insert card photos to show dogs that match the list of breeds listed {% endcomment %}
-
-<center><div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div></center>
-</div>
-
-
-
-        <script src="./js/scripts.js"></script>
+    <script src="js/quiz.js "></script>
 </body>
 
 </html>

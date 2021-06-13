@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link href="./css/about.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
 <body>
     <div class="wrapper">
         <div class="background">
-            <img id="dogs2" src="./images/dogsBlue.jpg">
+
         </div>
         <!-- Navbar -->
         <div class="nav">
@@ -62,27 +62,19 @@
         <div class="mainContainer">
             <div id="container1">
                 <div class="menu">
-                    <p>
-                        <a class="linksMenuIcon" href="javascript:void(0)" onclick="w3_open()"><i
-                                class="fa fa-bars"></i></a> LINKS MENU
-                    </p>
+
                     <nav class="sidebar" id="mySidebar">
-                        <a id="xSide" href="javascript:void(0)" onclick="w3_close()" class="" title="Close Menu">
-                            <i class="fa fa-remove"></i>
-                        </a>
-                        <h4 class="bar-item"><b></b></h4>
+
                         <ul id="linksMenuBox">
-                            <li>
+                            <li style="margin: 0px; justify-content: center;">
                                 <a class="" href="./breeds.html">Dog Breeds <i class="fas fa-bone"></i></a>
                             </li>
-                            <li>
-                                <a class="" href="#">Shelters <i class="fas fa-home"></i></a>
+                            <li style="margin: 0px; justify-content: center;">
+                                <a class="" href="./shelter.html">Shelters <i class="fas fa-home"></i></a>
                             </li>
-                            <li>
-                                <a class="" href="./adoption.html">Adoption <i class="fas fa-dog"></i></a>
-                            </li>
-                            <li>
-                                <a class="dogJokModal" href="#">Dog Joke Modal <i class="fas fa-paw"></i></a>
+
+                            <li style="margin: 0px; justify-content: center;">
+                                <a class="dogJokModal" href="./joke.html">Dog Joke Modal <i class="fas fa-paw"></i></a>
                             </li>
                         </ul>
 
@@ -92,28 +84,11 @@
             <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
             <div id="container2">
-                <!-- Joke Modal -->
-                <div id="modalBox">
-                    <div id="overlay" class="modal__overlay">
-                        <div id="modal" class="modal__content">
-                            <h1>HEY MAN.......wanna hear a joke?</h1>
-                            <p></p>
-                            <img id="dogGif" src="./images/laughingdog.gif" alt="Laughing Dog">
-                            <button type="button" id="closeModal" class="modal__close">X</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Joke Modal -->
                 <div class="scroll-container">
                     <div class="scrollContent">
                         <center>
-                            <h1>Meet Our Team!</h1>
+                            <h1>Meet The Team</h1>
                         </center>
-                        <!-- <h1>About Us</h1> -->
-                        <!-- <p>
-                                The team that made this project possible!
-                            </p> -->
-
                         <div class="column">
                             <div class="card1">
                                 <div id="contactImg">
@@ -139,16 +114,17 @@
                                     <p>mike@example.com</p>
                                     <p><button class="button">Contact</button></p>
                                 </div>
-                                <div id="contactImg">
-                                    <img src="./images/laughingdog.gif" alt="Mike" style="width:100%">
+                                <div id="nickImg">
+                                    <img id="nick" src="./images/laughingdog.gif" alt="Nick" style="width:100%">
                                 </div>
                             </div>
                         </div>
 
                         <div class="column">
                             <class class="card3">
-                                <div id="contactImg">
-                                    <img id="zachImg" src="./images/zachandraider.jpg.PNG" alt="Zach and his Dog Raider" style="padding: 15px;">
+
+                                <div id="zachImg">
+                                    <img id="zach" src="./images/zachandraider.jpg.PNG" alt="Zach and his Dog Raider" style="padding: 15px;">
                                 </div>
                                 <div id="contactContent">
                                     <h2>Zach</h2>
@@ -171,43 +147,15 @@
     <footer id="footer">
 
         <div id="footer" ">
-                <p>
-                    <center>A Website Created By The Disembodied Voices</center>
-                </p>
-            </div>
-        </footer>
+            <p>
+                <center>A Website Created By The Disembodied Voices</center>
+            </p>
+        </div>
+    </footer>
 
         <!-- END MAIN -->
-    </div>
 
-    <script src="./js/scripts.js "></script>
+        <script src="./js/scripts.js "></script>
 </body>
+
 </html>
-
-
-
-                    <!-- <div class="mainContent ">
-                        <div class="welcomeSection ">
-                            <div class="welcomeContent ">
-                                <h1></h1>
-                                <p> </p>
-                                <p></p>
-                                <p></p>
-                            </div>
-                        </div>
-
-                        <div class="quizSection ">
-                            <div class="quizContent ">
-                                <h1></h1>
-                                <p></p>
-                            </div>
-                        </div>
-
-                        <div class="adoptSection ">
-                            <div class="adoptContent ">
-                                <h1></h1>
-                                <div id=" ">
-
-                                </div>
-                            </div>
-                        </div> -->

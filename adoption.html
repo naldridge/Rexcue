@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/adoption.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6308212b22.js" crossorigin="anonymous"></script>
@@ -17,7 +17,7 @@
 <body>
     <div class="wrapper">
         <div class="background">
-            <img id="dogs2" src="./images/dogsBlue.jpg">
+            <!-- <img id="dogs2" src="./images/dogsBlue.jpg"> -->
         </div>
         <!-- Navbar -->
         <div class="nav">
@@ -61,27 +61,16 @@
         <div class="mainContainer">
             <div id="container1">
                 <div class="menu">
-                    <p>
-                        <a class="linksMenuIcon" href="javascript:void(0)" onclick="w3_open()"><i
-                                class="fa fa-bars"></i></a> LINKS MENU
-                    </p>
                     <nav class="sidebar" id="mySidebar">
-                        <a id="xSide" href="javascript:void(0)" onclick="w3_close()" class="" title="Close Menu">
-                            <i class="fa fa-remove"></i>
-                        </a>
-                        <h4 class="bar-item"><b></b></h4>
                         <ul id="linksMenuBox">
-                            <li>
-                                <a class="" href="./breeds.html">Dog Breeds <i class="fas fa-bone"></i></a>
+                            <li style="margin: 0;">
+                                <a class="" href="./breeds.html">Dog Breeds <i class="fas fa-bone" "></i></a>
                             </li>
-                            <li>
-                                <a class="" href="#">Shelters <i class="fas fa-home"></i></a>
+                            <li style="margin: 0;">
+                                <a class="" href="./shelter.html">Shelters <i class="fas fa-home"></i></a>
                             </li>
-                            <li>
-                                <a class="" href="./adoption.html">Adoption <i class="fas fa-dog"></i></a>
-                            </li>
-                            <li>
-                                <a class="dogJokModal" href="#">Dog Joke Modal <i class="fas fa-paw"></i></a>
+                            <li style="margin: 0;">
+                                <a class="dogJokModal" href="./joke.html">Dog Joke Modal <i class="fas fa-paw"></i></a>
                             </li>
                         </ul>
 
@@ -96,7 +85,7 @@
 
 
                 <!-- Joke Modal -->
-                <div id="modalBox">
+                <!-- <div id="modalBox">
                     <div id="overlay" class="modal__overlay">
                         <div id="modal" class="modal__content">
                             <h1>HEY MAN.......wanna hear a joke?</h1>
@@ -105,14 +94,18 @@
                             <button type="button" id="closeModal" class="modal__close">X</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- End of Joke Modal -->
                 <div class="scroll-container">
                     <div class="mainContent">
                         <div class="adoptionSection">
                             <div class="adoptionContent">
-                                <h1>Adoption</h1>
-                              <p> There are so many options when it comes to adding a new pet to your home. It's no secret that dogs are our best friends, but so many of them are in need of loving homes. The next time you consider purchasing a dog from a breeder or a puppy mill, remember that so many wonderful dogs need adopting from shelters. You will make their lives better and your home will be filled with an unmatched abundance of love. Watch the video below to see how grateful this pup was to finally go home!</p>
+                                <center>
+                                    <h1>Adoption</h1>
+                                </center>
+                                <p> There are so many options when it comes to adding a new pet to your home. It's no secret that dogs are our best friends, but so many of them are in need of loving homes. The next time you consider purchasing a dog from
+                                    a breeder or a puppy mill, remember that so many wonderful dogs need adopting from shelters. You will make their lives better and your home will be filled with an unmatched abundance of love. Watch the video below to
+                                    see how grateful this pup was to finally go home!</p>
 
                                 <p>Bringing home a new pet is incredibly exciting. And adopting a pet from a shelter or rescue group is not only exciting, but it’s truly a feel-good experience as well. Every day, more than 1,700 dogs and cats are killed
                                     in America’s shelters simply because they don’t have safe places to call home. By adopting, it means that each time you look into your pet’s eyes, you can feel good knowing that you truly did save a life.</p>
@@ -128,6 +121,7 @@
                                 </ul>
                                 <p>Because of these reasons, right now there are hundreds of great pets at shelters and with rescue groups waiting for someone to choose them. That’s why adopting an animal is the best way to add a new pet to your family.</p>
 
+<<<<<<< HEAD
                                 <center><iframe id="dogVideo" width="660 " height="415 " src="https://www.youtube.com/embed/yXLQDW3iZ3k " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture "
                                         allowfullscreen></iframe></center>
 
@@ -139,32 +133,26 @@
                                 <div id="mainContentLinks">
                                     <a href="https://www.petfinder.com/ ">Petfinder</a>
                                     <a href="https://www.petfinder.com/pet-adoption/dog-adoption/military-dog-adoption/ ">Military Dog Adoption</a>
+=======
+                                <div id="videoArea">
+                                    <iframe id="dogVideo" style="height: 100%;" src="https://www.youtube.com/embed/yXLQDW3iZ3k " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture " allowfullscreen></iframe>
+>>>>>>> fa23b8c10a0b08735fec851b82104d51b123afd1
                                 </div>
+
+                                <p>To help more helpless pups, please see the link below</p>
+
+                                <center>
+                                    <h1>Resources</h1>
+                                </center>
+
+                                <center>
+                                    <div id="mainContentLinks">
+                                        <a href="https://www.petfinder.com/ ">Petfinder</a>
+                                        <a href="https://www.petfinder.com/pet-adoption/dog-adoption/military-dog-adoption/ ">Military Dog Adoption</a>
+                                    </div>
+                                </center>
                             </div>
                         </div>
-
-                        <!-- <div class="">
-                            <div class="">
-                                <h1></h1>
-                                <p></p>
-                            </div>
-                        </div>
-
-                        <div class="">
-                            <div class="">
-                                <h1></h1>
-                                <div>
-
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <!-- Button -->
-                        <div class="adoptButtonSection">
-                            <button class="button">Find Your New Best Friend Here!</button>
-                        </div>
-
-
                     </div>
                 </div>
             </div>
