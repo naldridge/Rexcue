@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/mission.css" rel="stylesheet">
+    <title>Rescue Shelters</title>
+    <link href="./css/styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6308212b22.js" crossorigin="anonymous"></script>
-
-    <title>REXcue!</title>
-
 </head>
 
 <body>
@@ -55,8 +53,6 @@
             </div>
 
         </div>
-
-
         <!-- Sidebar -->
         <div class="mainContainer">
             <div id="container1">
@@ -88,7 +84,8 @@
                     </nav>
                 </div>
             </div>
-            <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+            <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+                id="myOverlay"></div>
 
             <div id="container2">
                 <!-- Joke Modal -->
@@ -103,60 +100,26 @@
                     </div>
                 </div>
                 <!-- End of Joke Modal -->
-                <div class="scroll-container">
-                    <div class="mainContent">
-                        <div class="missionSection">
-                            <div class="missionContent">
-                                <center>
-                                    <h1>Our Mission</h1>
-                                </center>
-                                <p>To use Internet technology and the resources it can generate to:</p>
-                                <ul>
-                                    <li>
-                                        Increase public awareness of the availability of high-quality adoptable pets
-                                    </li>
-                                    <li>
-                                        Increase the overall effectiveness of pet adoption programs across North America to the extent that the euthanasia of adoptable pets is eliminated
-                                    </li>
-                                    <li>
-                                        Elevate the status of pets to that of family member
-                                    </li>
-                                </ul>
-                                From the comfort of their personal computers, pet lovers can search for a pet that best matches their needs. They can then reference a shelter’s web page and discover what services it offers. Petfinder also includes discussion forums, a pet-care resource
-                                directory and a library of free pet-care articles to help keep pets in their homes.</p>
-                                <p>
-                                    <p></p>
-                            </div>
-                        </div>
-                        <div class="adoptSection">
-                            <div class="adoptContent">
-                                <h1>Adoptable Furry Friends!</h1>
-                                <div id="dogPics">
-                                    <img id="adoptDog" src="./images/black lab.jpg" alt="blacklab" width="100px" height="100px">
-                                    <img id="adoptDog" src="./images/cute dog laying down.jpg" alt="cute" width="100px" height="100px">
-                                    <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
-                                    <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
-                                    <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
-                                    <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div id="rescueContainer">
+                    <form id="adoptionSearch">
+                        <label id="zipcodeSearch">Zipcode
+                            <input type="text" id="zipcodeTxt" placeholder="Enter your 5 Digit Zipcode">
+                        </label>
+
+                        <button type="button" id="runSearch">Show Rescues in My Area</button>
+                    </form>
                 </div>
-            </div>
-        </div>
-        <footer id="footer">
+                <div id="rescueResults"></div>
+                <footer id="footer">
 
-            <div id="footer" ">
-                <p>
-                    <center>A Website Created By The Disembodied Voices</center>
-                </p>
-            </div>
-        </footer>
+                    <div id="footer" ">
+                        <p>
+                            <center>A Website Created By The Disembodied Voices</center>
+                        </p>
+                    </div>
+                </footer>
+                <script src="./js/adoption.js"></script>
 
-        <!-- END MAIN -->
-    </div>
-
-    <script src="./js/scripts.js "></script>
 </body>
+
 </html>
