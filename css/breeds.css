@@ -430,3 +430,7 @@ nav,
     display: flex;
     justify-content: center;
 }
+
+.breedSelect {
+    margin-bottom: 10px;
+}
