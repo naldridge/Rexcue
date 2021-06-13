@@ -73,14 +73,13 @@
                             </li>
 
                             <li style="margin: 0px; justify-content: center;">
-                                <a class="dogJokModal" href="#">Dog Joke Modal <i class="fas fa-paw"></i></a>
+                                <a class="dogJokModal" href="./joke.html">Dog Joke Modal <i class="fas fa-paw"></i></a>
                             </li>
                         </ul>
 
                     </nav>
                 </div>
             </div>
-            <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
             <div id="container2">
                 <!-- Joke Modal -->
@@ -100,7 +99,12 @@
                 <center>
                     <h1 id="findBreed">Find The Perfect Breed For You!</h1>
                 </center>
-                <div class="scroll-container">
+                <select class="breedSelect" onchange="changeDoggo(this)">
+                <option>Select a Breed</option>
+                </select>
+                <center><img id="doggoImage" src=" " alt="doggo" /></center>
+
+                <!-- <div class="scroll-container">
                     <div class="mainContent">
                         <div class="breedsSection">
                             <div class="breedsContent">
@@ -109,30 +113,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 
-
-    <!-- <div class="adoptSection">
-                            <div class="adoptContent">
-                                <h1>Adoptable Furry Friends!</h1>
-                                <div id="dogPics">
-                                    <img id="adoptDog" src="./images/black lab.jpg" alt="blacklab" width="100px" height="100px">
-                                    <img id="adoptDog" src="./images/cute dog laying down.jpg" alt="cute" width="100px" height="100px">
-                                    <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
-                                    <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
-                                    <img id="adoptDog" src="./images/happy pit.jpg" alt="pit" width="100px" height="100px">
-                                    <img id="adoptDog" src="./images/hopper.jpg" alt="hopper" width="100px" height="100px">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Button -->
-    <!-- <div class="adoptButtonSection">
-        <button class="button">Find Your New Best Friend Here!</button>
-    </div> -->
 
     <script src="./js/breeds.js "></script>
 </body>

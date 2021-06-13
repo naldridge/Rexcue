@@ -235,8 +235,7 @@ button.modal__close {
 
 /* Scroll Nav ~~~~~~~~~~~~~~~~~~~~~ */
 
-
-/* nav,
+nav,
 .scroll-container {
     display: block;
     margin: 0 auto;
@@ -246,7 +245,7 @@ button.modal__close {
 .scroll-page {
     display: flex;
     height: 100%;
-} */
+}
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -254,7 +253,6 @@ button.modal__close {
 .mainContent {
     padding: 0 16px;
     z-index: 3;
-    width: 90%;
 }
 
 .mainContainer {
@@ -262,23 +260,21 @@ button.modal__close {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 90px auto 0;
-    max-width: 1000px;
-    width: 100%;
-    /* padding-right: 20px; */
+    max-width: 790px;
 }
 
 #container1 {
     display: flex;
     margin: 0;
     align-self: flex-start;
-    padding: 0;
+    padding: 0 16px;
     width: 100%;
 }
 
 #container2 {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -353,15 +349,19 @@ button.modal__close {
 
 #dogPics {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-content: center;
     justify-content: space-between;
     padding-bottom: 20px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 #dogPics img {
-    width: 100px;
-    height: 100px;
+    /* width: 30%;
+    height: 30%; */
+    border-radius: 50%;
 }
 
 #adoptDog {
@@ -391,10 +391,31 @@ button.modal__close {
     margin-bottom: 10px;
 }
 
+.missionContent {
+    width: 100%;
+}
+
+#quizButton {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+}
+
+#goToQuiz {
+    width: 80%;
+    color: white;
+    background-color: yellowgreen;
+    border: 1px solid white;
+    border-radius: 3px;
+    height: 40px;
+}
+
 #adoptButton {
     width: 100%;
     justify-content: center;
     display: flex;
+    padding: 20px;
 }
 
 #goToAdopt {
@@ -406,22 +427,38 @@ button.modal__close {
     height: 40px;
 }
 
-.scrollContainer {
-    width: 85%;
+#columns {
+    column-width: 320px;
+    column-gap: 15px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
 }
 
-#videoArea {
-    width: 100%;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+div#columns:hover figure:not(:hover) {
+    opacity: 0.4;
 }
 
-.adoptionSection {
-    width: 100%;
+div#columns figure {
+    background: #fefefe;
+    border: 2px solid #fcfcfc;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    margin: 0 2px 15px;
+    padding: 15px;
+    padding-bottom: 10px;
+    transition: opacity .4s ease-in-out;
+    column-break-inside: avoid;
+    display: inline-block;
 }
 
-#dogVideo {
+div#columns figure img {
     width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+#dogGif {
+    width: 50%;
 }
