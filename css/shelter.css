@@ -340,7 +340,8 @@ nav,
 #footer {
     height: 20px;
     position: sticky;
-    /* background-color: #f06543; */
+    background-color: #f06543;
+    color: white;
     width: 100%;
     align-items: center;
     align-content: center;
