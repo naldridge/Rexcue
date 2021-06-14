@@ -63,7 +63,6 @@ div.navbar {
 #navLogo {
     display: flex;
     flex-direction: row;
-    width: 10%;
 }
 
 #logoLink {
@@ -84,6 +83,12 @@ div.navbar {
     padding: 5px;
 }
 
+#doglogopic {
+    width: 70%;
+    min-width: 91px;
+    padding-top: 8px;
+}
+
 div a {
     color: #444;
     text-decoration: none;
@@ -91,11 +96,11 @@ div a {
     font-size: 14px;
 }
 
-div a:hover {
+div a.hover:hover {
     color: #f06543;
 }
 
-div a::before {
+div a.hover::before {
     content: '';
     display: block;
     height: 5px;
@@ -106,7 +111,7 @@ div a::before {
     transition: all ease-in-out 250ms;
 }
 
-div a:hover::before {
+div a.hover:hover::before {
     width: 100%;
 }
 
@@ -175,64 +180,6 @@ nav a:hover::before {
     /* flex-wrap: wrap; */
 }
 
-
-/* Modal Overlay~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-.modal__overlay {
-    background-color: #000;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    display: none;
-}
-
-.modal__overlay.visible {
-    display: flex;
-}
-
-.modal__content {
-    background-color: white;
-    display: block;
-    margin: auto;
-    position: relative;
-    padding: 16px;
-    height: 500px;
-    width: 600px;
-    border-radius: 8px;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-
-button.modal__close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    border-radius: 8px;
-    border: none;
-}
-
-#modalBox {
-    z-index: 10;
-}
-
-#dogGif {
-    display: flex;
-}
-
-#modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-content: center; */
-    /* align-items: center; */
-}
-
-
 /* Main Middle Text Content ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -262,8 +209,9 @@ nav,
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 90px auto 0;
+    margin: 101px auto 0;
     max-width: 790px;
+    background-color: rgba(255, 255, 255, 0.623);
 }
 
 #container1 {
@@ -314,7 +262,7 @@ nav,
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .background {
-    background: #72a4c7 url("../images/dogsBlue.jpg") bottom center no-repeat;
+    background: url("../images/altBackground.jpg");
     background-size: contain;
     display: flex;
     height: 100%;
@@ -330,7 +278,8 @@ nav,
 #footer {
     height: 20px;
     position: sticky;
-    /* background-color: #f06543; */
+    background-color: #f06543;
+    color: white;
     width: 100%;
     align-items: center;
     align-content: center;
@@ -382,7 +331,7 @@ nav,
 .button {
     border: 1px solid white;
     border-radius: 3px;
-    width: 40%;
+    width: 60%;
     height: 50px;
     color: white;
     background-color: yellowgreen;

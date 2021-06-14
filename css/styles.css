@@ -4,6 +4,13 @@ html {
     justify-content: center;
     align-content: center;
     align-items: center;
+    background-image: url(../images/dogRunning.gif);
+    background-position: absolute;
+    background-attachment: scroll;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-color: #a2c7e0;
+    /* background-size: cover; */
 }
 
 * {
@@ -16,7 +23,6 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgb(255, 255, 255);
 }
 
 
@@ -24,7 +30,7 @@ body {
 
 .nav {
     display: flex;
-    max-width: 100vw;
+    /* max-width: 100vw; */
     background-color: white;
     background-image: url(https://www.transparenttextures.com/patterns/gplay.png) !important;
     width: 100%;
@@ -35,6 +41,12 @@ body {
     align-items: center;
     z-index: 4;
     border-bottom: 1px solid rgba(128, 128, 128, 0.295);
+}
+
+#doglogopic {
+    width: 70%;
+    min-width: 91px;
+    padding-top: 8px;
 }
 
 #headerContent {
@@ -88,11 +100,11 @@ div a {
     font-size: 14px;
 }
 
-div a:hover {
+div a.hover:hover {
     color: #f06543;
 }
 
-div a::before {
+div a.hover::before {
     content: '';
     display: block;
     height: 5px;
@@ -103,7 +115,7 @@ div a::before {
     transition: all ease-in-out 250ms;
 }
 
-div a:hover::before {
+div a.hover:hover::before {
     width: 100%;
 }
 
@@ -122,18 +134,18 @@ h1 {
 
 /* Side Navigation Link Menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-nav a {
+nav.a {
     color: #444;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
 }
 
-nav a:hover {
+nav.a:hover {
     color: #f06543;
 }
 
-nav a::before {
+nav.a::before {
     content: '';
     display: block;
     height: 5px;
@@ -144,7 +156,7 @@ nav a::before {
     transition: all ease-in-out 250ms;
 }
 
-nav a:hover::before {
+nav.a:hover::before {
     width: 100%;
 }
 
@@ -166,9 +178,9 @@ nav a:hover::before {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    justify-content: space-between;
+    /* align-items: center;
+    align-content: center; */
     /* flex-wrap: wrap; */
 }
 
@@ -259,7 +271,7 @@ nav,
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 90px auto 0;
+    margin: 101px auto 0;
     max-width: 790px;
 }
 
@@ -267,8 +279,11 @@ nav,
     display: flex;
     margin: 0;
     align-self: flex-start;
-    padding: 0 16px;
+    /* padding: 0 16px; */
     width: 100%;
+    /* max-width: 100vw; */
+    background-color: rgba(10, 10, 10, 0.623);
+    border-radius: 3px;
 }
 
 #container2 {
@@ -279,6 +294,7 @@ nav,
     justify-content: center;
     align-items: center;
     align-content: center;
+    background-color: rgba(255, 255, 255, 0.623);
 }
 
 #container2 img {
@@ -286,32 +302,8 @@ nav,
     height: auto;
 }
 
-
-/* Background Pic ~~~~~~~~~~~ */
-
-#dogs2 {
-    display: flex;
-    border-radius: 0;
-    position: center center;
-    z-index: -1;
-    width: 70%;
-    max-width: 1140px;
-    min-width: 790px;
-    height: 100%;
-    min-height: 1248px;
-    max-height: 100%;
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    margin: auto;
-    border: 1px solid rgba(128, 128, 128, 0.295);
-}
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
 .background {
-    background: #72a4c7 url("../images/dogsBlue.jpg") bottom center no-repeat;
+    background: url("../images/altBackground.jpg");
     background-size: contain;
     display: flex;
     height: 100%;
@@ -319,7 +311,7 @@ nav,
     padding-bottom: 500px;
     position: absolute;
     justify-content: center;
-    z-index: -1;
+    z-index: -10;
     width: 100%;
     min-height: 2000px;
 }
@@ -337,7 +329,7 @@ nav,
 
 .wrapper {
     width: 100%;
-    min-width: 100vw;
+    /* min-width: 100vw; */
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -345,23 +337,6 @@ nav,
 
 .content {
     flex-grow: 1;
-}
-
-#dogPics {
-    display: flex;
-    /* flex-wrap: wrap; */
-    align-content: center;
-    justify-content: space-between;
-    padding-bottom: 20px;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-
-#dogPics img {
-    /* width: 30%;
-    height: 30%; */
-    border-radius: 50%;
 }
 
 #adoptDog {
@@ -399,7 +374,8 @@ nav,
     width: 100%;
     justify-content: center;
     display: flex;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #goToQuiz {
@@ -415,7 +391,8 @@ nav,
     width: 100%;
     justify-content: center;
     display: flex;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #goToAdopt {
@@ -457,4 +434,27 @@ div#columns figure img {
     border-bottom: 1px solid #ccc;
     padding-bottom: 15px;
     margin-bottom: 5px;
+}
+
+#mySideBar {
+    background-color: white;
+    z-index: 5;
+}
+
+#toplink {
+    color: white;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40.6vh;
+    align-content: center;
+    align-items: center;
+    font-size: xx-large;    
+}
+
+#mainHeaderContent {
+    color: white;
 }

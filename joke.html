@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="./css/joke.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6308212b22.js" crossorigin="anonymous"></script>
@@ -17,38 +17,36 @@
 
 <body>
     <div class="wrapper">
-        <div class="background">
+        <!-- <div class="background">
 
-        </div>
+        </div> -->
         <!-- Navbar -->
         <div class="nav">
             <div id="headerContent">
 
                 <div id="navLogo">
-                    <a id="logoLink" href="./index.html">
-                        <h1>RE</h1>
-                        <img id="rexLogo" src="./images/rex.png" alt="Rex Logo" style="width: 65px;" />
-                        <h1>cue!</h1>
+                    <a id="logoLink" href="./index.html" class="noHover">
+                        <img id="doglogopic" src="./images/doglogo.png">
                     </a>
                 </div>
                 <div class="navbar">
                     <div id="navLink">
 
-                        <a href="./aboutus.html">About Us <i class="fas fa-users"></i></a>
+                        <a href="./aboutus.html" class="hover">About Us <i class="fas fa-users"></i></a>
 
                     </div>
                     <div id="navLink">
 
-                        <a href="./mission.html">Mission Statement <i class="fas fa-book"></i></a>
+                        <a href="./mission.html" class="hover">Mission Statement <i class="fas fa-book"></i></a>
 
                     </div>
                     <div id="navLink">
 
-                        <a href="./adoption.html">Adoption <i class="fas fa-dog"></i></a>
+                        <a href="./adoption.html" class="hover">Adoption <i class="fas fa-dog"></i></a>
 
                     </div>
                     <div id="navLink">
-                        <a href="./personality_quiz.html" class="right">Quiz <i class="far fa-edit"></i></a>
+                        <a href="./personality_quiz.html" class="hover" class="right">Quiz <i class="far fa-edit"></i></a>
 
 
                     </div>
@@ -56,7 +54,18 @@
             </div>
 
         </div>
-
+        <!-- Joke Modal -->
+        <div id="modalBox">
+            <div id="overlay" class="modal__overlay">
+                <div id="modal" class="modal__content">
+                    <h1>HEY MAN!.......wanna hear a joke?</h1>
+                    <p></p>
+                    <img id="dogGif" style="width: 50%;" src="./images/laughingdog.gif" alt="Laughing Dog">
+                    <button type="button" id="closeModal" class="modal__close">X</button>
+                </div>
+            </div>
+        </div>
+        <!-- End of Joke Modal -->
 
         <!-- Sidebar -->
         <div class="mainContainer">
@@ -64,15 +73,15 @@
                 <div class="menu">
                     <nav class="sidebar" id="mySidebar">
                         <ul id="linksMenuBox">
-                            <li style="margin: 0px; justify-content: center;">
-                                <a class="" href="./breeds.html">Dog Breeds <i class="fas fa-bone"></i></a>
+                            <li style="margin: 0px; justify-content: center; color: white;">
+                                <a id="toplink" href="./breeds.html">Dog Breeds <i class="fas fa-bone"></i></a>
                             </li>
                             <li style="margin: 0px; justify-content: center;">
-                                <a class="" href="./shelter.html">Shelters <i class="fas fa-home"></i></a>
+                                <a id="toplink" href="./shelter.html">Shelters <i class="fas fa-home"></i></a>
                             </li>
 
                             <li style="margin: 0px; justify-content: center;">
-                                <a class="dogJokModal" href="./joke.html">Dog Joke Modal <i class="fas fa-paw"></i></a>
+                                <a class="dogJokModal" id="toplink" href="./joke.html">Dog Joke Modal <i class="fas fa-paw"></i></a>
                             </li>
                         </ul>
                     </nav>
@@ -80,19 +89,13 @@
             </div>
             <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
+            <div class="mainHeader">
+                <center><h1 id="mainHeaderContent">Welcome To Rexcue!</h1></center>
+            </div>
+
+
+
             <div id="container2">
-                <!-- Joke Modal -->
-                <div id="modalBox">
-                    <div id="overlay" class="modal__overlay">
-                        <div id="modal" class="modal__content">
-                            <h1>HEY MAN!.......wanna hear a joke?</h1>
-                            <p></p>
-                            <img id="dogGif" style="width: 50%;" src="./images/laughingdog.gif" alt="Laughing Dog">
-                            <button type="button" id="closeModal" class="modal__close">X</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Joke Modal -->
                 <div class="scroll-container">
                     <div class="mainContent">
                         <div class="welcomeSection">
@@ -168,24 +171,25 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Button -->
-                    <div id="adoptButton">
-                        <button id="goToAdopt" type="button"><a href="./adoption.html">Find Your New Best Friend Here!</a></button>
-                    </div>
-
                 </div>
+
+                <!-- Button -->
+                <div id="adoptButton">
+                    <button id="goToAdopt" type="button"><a href="./adoption.html">Find Your New Best Friend Here!</a></button>
+                </div>
+
             </div>
         </div>
     </div>
-    <footer id="footer">
+    </div>
+    <!-- <footer id="footer">
 
         <div id="footer" ">
                 <p>
                     <center>A Website Created By The Disembodied Voices</center>
                 </p>
             </div>
-        </footer>
+        </footer> -->
 
         <!-- END MAIN -->
     </div>

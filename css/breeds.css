@@ -71,6 +71,12 @@ div.navbar {
     justify-content: center;
 }
 
+#doglogopic {
+    width: 70%;
+    min-width: 91px;
+    padding-top: 8px;
+}
+
 #navbar ul {
     display: flex;
     flex-direction: row;
@@ -90,11 +96,11 @@ div a {
     font-size: 14px;
 }
 
-div a:hover {
+div a.hover:hover {
     color: #f06543;
 }
 
-div a::before {
+div a.hover::before {
     content: '';
     display: block;
     height: 5px;
@@ -105,7 +111,7 @@ div a::before {
     transition: all ease-in-out 250ms;
 }
 
-div a:hover::before {
+div a.hover:hover::before {
     width: 100%;
 }
 
@@ -263,9 +269,10 @@ nav,
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
-    margin: 90px auto 0;
+    width: 80%;
+    margin: 101px auto 0;
     /* max-width: 790px; */
+    background-color: rgba(255, 255, 255, 0.623);
 }
 
 #container1 {
@@ -279,7 +286,7 @@ nav,
 #container2 {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -316,23 +323,24 @@ nav,
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .background {
-    background: url("../images/dogsBlue.jpg") bottom center no-repeat;
+    background: url("../images/altBackground.jpg");
     background-size: contain;
     display: flex;
     height: 100%;
     margin: auto;
-    padding-bottom: 500px;
+    padding-bottom: 300px;
     position: absolute;
     justify-content: center;
     z-index: -1;
     width: 100%;
-    min-height: 2000px;
+    min-height: max-content
 }
 
 #footer {
     height: 20px;
     position: sticky;
-    /* background-color: #f06543; */
+    background-color: #f06543;
+    color: white;
     width: 100%;
     align-items: center;
     align-content: center;
