@@ -2,9 +2,11 @@
 const rescueSearch = document.getElementById('runSearch');
 const rescueResults = document.getElementById("rescueResults");
 
+
 document.addEventListener('DOMContentLoaded', function () {
-    
-/*  // gets geolocation data in the form of Lat/Longs
+
+    /* 
+    // gets geolocation data in the form of Lat/Longs
     function getLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
@@ -14,15 +16,20 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     function showPosition(position) {
+        const calculatedLocation = "latitude=" + position.coords.latitude + "&" + "longitude=" + position.coords.longitude;
         console.log("Latitude: " + position.coords.latitude +
-            "<br>Longitude: " + position.coords.longitude);
+            "<br>Longitude: " + position.coords.longitude); 
+        console.log(calculatedLocation);
+        fetchPetfinder(calculatedLocation);
     };
     getLocation();
-    showPosition(); */
+    showPosition();  */
 });
 
 rescueSearch.addEventListener('click', function () {
     const zipInput = document.getElementById('zipcodeTxt').value;
+    const dogResults = document.getElementById('dogResults');
+
 
     console.log(zipInput);
 
@@ -55,12 +62,61 @@ rescueSearch.addEventListener('click', function () {
 
         }).then(function (data) {
             // Log the pet data
-            console.log(data);
-
+            console.log(data.pagination)
+            //console.log(data.animals);
+            //displayAdoptableDogs(data);
+            return data.animals;
+        }).then(function (animals) {
+            console.log(animals);
+            breakoutAdoptableDogs(animals);
         }).catch(function (error) {
             console.error("ERROR: ", error);
             return error;
         });
+    };
+
+    function breakoutAdoptableDogs(animals) {
+        const adoptableDogs = animals;
+        console.log("dogs to be rescued: ", adoptableDogs);
+
+        /*  Object.keys(adoptableDogs).forEach(key => {
+             console.log(key, adoptableDogs[key]);
+         }); */
+
+
+
+
+        adoptableDogs.forEach(function (element) {
+            //create a temporary array for each object
+            //specify which values to display
+            //add values to dogDetails
+            //const detailsArray = Object.entries(element);
+            //const filteredDetailsArray = 
+            let dogList = document.createElement('ul');
+            const breed = Object.values(element.breeds.primary);
+            
+            const dogDetails = [element.name, breed, element.size];
+
+            dogDetails.forEach(function(item){
+                let detailsLi = document.createElement('li');
+
+                detailsLi.innerText = item;
+                dogList.appendChild(detailsLi);
+            });
+            dogResults.appendChild(dogList);           
+
+
+            /* const dogDetails = document.createElement('li');
+            const detailsString = JSON.stringify(element, null, 4);
+            
+ 
+            console.log(detailsArray);
+ 
+            dogResults.appendChild(dogDetails);
+            dogDetails.innerText = detailsString;
+            console.log("li :", dogDetails);  */
+        });
+
     };
 
     fetchPetfinder();
