@@ -82,31 +82,32 @@
                 <div class="scroll-container">
                     <div class="mainContent">
                         <div class="shelterSection">
-                            <div class="shelterContent">
-                                <center>
-                                    <h1>Shelters Near You</h1>                                
-                                    <p>Shelter Content</p>
-                                    <p>Shelter Content</p>
-                                    <p>Shelter Content</p>
-                                </center>
-                            </div>
-                        </div>
-
-                        <div class="searchSection">
+                            
                             <div class="searchContent">
                                 <center>
-                                    <h1>Search For Dogs in Shelters</h1>
-                                    <p>Search Bar</p>
+                                    <h1>Search For Dogs in Shelters Near You!
+                                    </h1>
                                 </center>
                             </div>
-                        </div>
+                            
+                            <div id="rescueContainer">
+                                <form id="adoptionSearch">
+                                    <center><label id="zipcodeSearch">Zipcode
+                                        <input style="margin-bottom: 10px;"type="text" id="zipcodeTxt" placeholder="Enter your 5 Digit Zipcode">
+                                    </label></center>
+            
+                                    <center><button type="button" id="runSearch" style="background-color: yellowgreen; color: rgb(24, 23, 23); width: 80%; padding: 8px; border: none; font-size: large;">Show Rescues in My Area</button></center>
+                                </form>
+                            </div>
+                            <div id="rescueResults">
+                                <ul id="dogResults"></ul>
+                            </div>
 
                         <div class="adoptSection">
                             <div class="adoptContent">
                                 <center>
                                     <h1>Adoptable Furry Friends!</h1>
                                 </center>
-                                <!-- Keep this? It adds a hover effect over all the pics. But it takes you to petfinder if you see a dog you like. -->
                                 <a href="https://www.petfinder.com">
                                 <div id="columns">
                                     <figure>
@@ -154,7 +155,7 @@
 
                 <!-- Button -->
                 <div id="adoptButton">
-                    <button id="goToAdopt" type="button"><a href="./adoption.html">Find Your New Best Friend Here!</a></button>
+                    <button id="goToAdopt" type="button" style="font-size: large; color: white;"><a href="./adoption.html">Find Your New Best Friend Here!</a></button>
                 </div>
 
             </div>
@@ -173,6 +174,6 @@
         <!-- END MAIN -->
     </div>
 
-    <script src="js/scripts.js "></script>
+    <script src="js/adoption.js"></script>
 </body>
 </html>
