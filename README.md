@@ -1,18 +1,19 @@
 <h1>Front End Project</h1>
 
+https://rexcue.netlify.app/index.html
 
 # The Disembodied Voices
 
-###
+
+
 Brittany
-###
+
 Nick
-###
+
 Zach
 
-<h1>About<h1>
+# About
 
-###
 Our team created a dog adoption website using the Petfinder API. This project is a collection of resources that allow users to find the perfect companion for their lifestyle.
 
 Our quiz allows users to select a few characteristics and prefrences that match them to a compatible dog breed. 
