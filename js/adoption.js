@@ -64,7 +64,6 @@ rescueSearch.addEventListener('click', function () {
             // Log the pet data
             console.log(data.pagination)
             //console.log(data.animals);
-            //displayAdoptableDogs(data);
             return data.animals;
         }).then(function (animals) {
             console.log(animals);
@@ -79,44 +78,20 @@ rescueSearch.addEventListener('click', function () {
         const adoptableDogs = animals;
         console.log("dogs to be rescued: ", adoptableDogs);
 
-        /*  Object.keys(adoptableDogs).forEach(key => {
-             console.log(key, adoptableDogs[key]);
-         }); */
 
-
-
-
+        let dogList = document.createElement('ul');
         adoptableDogs.forEach(function (element) {
-            //create a temporary array for each object
-            //specify which values to display
-            //add values to dogDetails
-            //const detailsArray = Object.entries(element);
-            //const filteredDetailsArray = 
-            let dogList = document.createElement('ul');
-            const breed = Object.values(element.breeds.primary);
+
+            //console.log("element is: ", element);
+            let detailsLi = document.createElement('li');
             
-            const dogDetails = [element.name, breed, element.size];
 
-            dogDetails.forEach(function(item){
-                let detailsLi = document.createElement('li');
+            detailsLi.innerText = `${element.name} ${element.breeds.primary} ${element.size} ${element.url}`;
+            dogList.appendChild(detailsLi);
 
-                detailsLi.innerText = item;
-                dogList.appendChild(detailsLi);
-            });
-            dogResults.appendChild(dogList);           
+            dogResults.appendChild(dogList);
 
-
-            /* const dogDetails = document.createElement('li');
-            const detailsString = JSON.stringify(element, null, 4);
-            
- 
-            console.log(detailsArray);
- 
-            dogResults.appendChild(dogDetails);
-            dogDetails.innerText = detailsString;
-            console.log("li :", dogDetails);  */
         });
-
     };
 
     fetchPetfinder();
