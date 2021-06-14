@@ -12,3 +12,5 @@ Petfinder.com
 phshelter.com
 rescuegroups.org (API "https://test1-api.rescuegroups.org/http/v2.json")
 
+
+curl to fetch translator - https://kigiri.github.io/fetch/
