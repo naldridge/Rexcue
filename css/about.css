@@ -63,7 +63,6 @@ div.navbar {
 #navLogo {
     display: flex;
     flex-direction: row;
-    width: 10%;
 }
 
 #logoLink {
@@ -84,6 +83,12 @@ div.navbar {
     padding: 5px;
 }
 
+#doglogopic {
+    width: 70%;
+    min-width: 91px;
+    padding-top: 8px;
+}
+
 div a {
     color: #444;
     text-decoration: none;
@@ -91,11 +96,11 @@ div a {
     font-size: 14px;
 }
 
-div a:hover {
+div a.hover:hover {
     color: #f06543;
 }
 
-div a::before {
+div a.hover::before {
     content: '';
     display: block;
     height: 5px;
@@ -106,7 +111,7 @@ div a::before {
     transition: all ease-in-out 250ms;
 }
 
-div a:hover::before {
+div a.hover:hover::before {
     width: 100%;
 }
 
@@ -262,7 +267,7 @@ nav,
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 90px auto 0;
+    margin: 101px auto 0;
     max-width: 790px;
 }
 
