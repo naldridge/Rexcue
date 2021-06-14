@@ -77,24 +77,30 @@ const buildDoggoSelect = (breeds) => {
     breedOptions.forEach(breedOption => {
         select.appendChild(breedOption);
     })
+    select.addEventListener(`change`, function(event) {
+        changeDoggo(event);
+    })
 }
 
 const fillDoggoImage = (imageUrl) => {
-    document.querySelector(`.doggoImage`).setAttribute(`src`, imageUrl)
+    console.log(imageUrl);
+    const doggoContainer = document.querySelector(`#doggoImage`)
+    const doggoImage = document.createElement(`img`);
+    doggoImage.setAttribute(`src`, imageUrl);
+    doggoContainer.append(doggoImage);
 }
 
 
 const getDogByBreed = async(breedId) => {
 
     const data = await fetch(BASE_API_URL + `/images/search?include_breed=1&breed_id=` + breedId).then((data) => data.json());
-    const { url: imageUrl, breeds } = data;
-    fillDoggoImage(imageUrl);
+    fillDoggoImage(data[0].url);
 }
 
 
-const changeDoggo = () => {
-    console.log(Event.target.value);
-    getDogByBreed(Event.target.value)
+const changeDoggo = (event) => {
+    console.log(event.target.value);
+    getDogByBreed(event.target.value)
 
 }
 
