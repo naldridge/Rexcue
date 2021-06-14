@@ -51,7 +51,7 @@ function showResults() {
         if (Boolean(match)) {
             let matchBreed = match.breed;
             console.log("match is: ", match.breed);
-            quizResults.innerText = "Your match is: " + matchBreed;
+            quizResults.innerText = "Your match is: " + matchBreed + Image;
             return match;
         } else {
             console.log("no match found");
@@ -65,6 +65,8 @@ function showResults() {
 
 
 };
+
+// adding image
 
 
 
