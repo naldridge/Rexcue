@@ -4,6 +4,13 @@ html {
     justify-content: center;
     align-content: center;
     align-items: center;
+    background-image: url(../images/dogRunning.gif);
+    background-position: absolute;
+    background-attachment: scroll;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-color: #a2c7e0;
+    /* background-size: cover; */
 }
 
 * {
@@ -16,7 +23,6 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgb(255, 255, 255);
 }
 
 
@@ -172,9 +178,9 @@ nav.a:hover::before {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    justify-content: space-between;
+    /* align-items: center;
+    align-content: center; */
     /* flex-wrap: wrap; */
 }
 
@@ -276,6 +282,8 @@ nav,
     /* padding: 0 16px; */
     width: 100%;
     /* max-width: 100vw; */
+    background-color: rgba(10, 10, 10, 0.623);
+    border-radius: 3px;
 }
 
 #container2 {
@@ -286,6 +294,7 @@ nav,
     justify-content: center;
     align-items: center;
     align-content: center;
+    background-color: rgba(255, 255, 255, 0.623);
 }
 
 #container2 img {
@@ -318,7 +327,7 @@ nav,
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .background {
-    background: #72a4c7 url("../images/dogsBlue.jpg") bottom center no-repeat;
+    background: url("../images/altBackground.jpg");
     background-size: contain;
     display: flex;
     height: 100%;
@@ -326,7 +335,7 @@ nav,
     padding-bottom: 500px;
     position: absolute;
     justify-content: center;
-    z-index: -1;
+    z-index: -10;
     width: 100%;
     min-height: 2000px;
 }
@@ -449,4 +458,27 @@ div#columns figure img {
     border-bottom: 1px solid #ccc;
     padding-bottom: 15px;
     margin-bottom: 5px;
+}
+
+#mySideBar {
+    background-color: white;
+    z-index: 5;
+}
+
+#toplink {
+    color: white;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40.5vh;
+    align-content: center;
+    align-items: center;
+    font-size: xx-large;    
+}
+
+#mainHeaderContent {
+    color: white;
 }

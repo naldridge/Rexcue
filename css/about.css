@@ -180,64 +180,6 @@ nav a:hover::before {
     /* flex-wrap: wrap; */
 }
 
-
-/* Modal Overlay~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-.modal__overlay {
-    background-color: #000;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    display: none;
-}
-
-.modal__overlay.visible {
-    display: flex;
-}
-
-.modal__content {
-    background-color: white;
-    display: block;
-    margin: auto;
-    position: relative;
-    padding: 16px;
-    height: 500px;
-    width: 600px;
-    border-radius: 8px;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-
-button.modal__close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    border-radius: 8px;
-    border: none;
-}
-
-#modalBox {
-    z-index: 10;
-}
-
-#dogGif {
-    display: flex;
-}
-
-#modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-content: center; */
-    /* align-items: center; */
-}
-
-
 /* Main Middle Text Content ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
@@ -269,6 +211,7 @@ nav,
     flex-wrap: wrap;
     margin: 101px auto 0;
     max-width: 790px;
+    background-color: rgba(255, 255, 255, 0.623);
 }
 
 #container1 {
@@ -319,7 +262,7 @@ nav,
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .background {
-    background: #72a4c7 url("../images/dogsBlue.jpg") bottom center no-repeat;
+    background: url("../images/altBackground.jpg");
     background-size: contain;
     display: flex;
     height: 100%;

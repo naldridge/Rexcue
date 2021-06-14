@@ -17,9 +17,9 @@
 
 <body>
     <div class="wrapper">
-        <div class="background">
+        <!-- <div class="background">
 
-        </div>
+        </div> -->
         <!-- Navbar -->
         <div class="nav">
             <div id="headerContent">
@@ -54,7 +54,18 @@
             </div>
 
         </div>
-
+        <!-- Joke Modal -->
+        <div id="modalBox">
+            <div id="overlay" class="modal__overlay">
+                <div id="modal" class="modal__content">
+                    <h1>HEY MAN!.......wanna hear a joke?</h1>
+                    <p></p>
+                    <img id="dogGif" style="width: 50%;" src="./images/laughingdog.gif" alt="Laughing Dog">
+                    <button type="button" id="closeModal" class="modal__close">X</button>
+                </div>
+            </div>
+        </div>
+        <!-- End of Joke Modal -->
 
         <!-- Sidebar -->
         <div class="mainContainer">
@@ -62,15 +73,15 @@
                 <div class="menu">
                     <nav class="sidebar" id="mySidebar">
                         <ul id="linksMenuBox">
-                            <li style="margin: 0px; justify-content: center;">
-                                <a class="" href="./breeds.html">Dog Breeds <i class="fas fa-bone"></i></a>
+                            <li style="margin: 0px; justify-content: center; color: white;">
+                                <a id="toplink" href="./breeds.html">Dog Breeds <i class="fas fa-bone"></i></a>
                             </li>
                             <li style="margin: 0px; justify-content: center;">
-                                <a class="" href="./shelter.html">Shelters <i class="fas fa-home"></i></a>
+                                <a id="toplink" href="./shelter.html">Shelters <i class="fas fa-home"></i></a>
                             </li>
 
                             <li style="margin: 0px; justify-content: center;">
-                                <a class="dogJokModal" href="./joke.html">Dog Joke Modal <i class="fas fa-paw"></i></a>
+                                <a class="dogJokModal" id="toplink" href="./joke.html">Dog Joke Modal <i class="fas fa-paw"></i></a>
                             </li>
                         </ul>
                     </nav>
@@ -78,19 +89,13 @@
             </div>
             <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
+            <div class="mainHeader">
+                <center><h1 id="mainHeaderContent">Welcome To Rexcue!</h1></center>
+            </div>
+
+
+
             <div id="container2">
-                <!-- Joke Modal -->
-                <div id="modalBox">
-                    <div id="overlay" class="modal__overlay">
-                        <div id="modal" class="modal__content">
-                            <h1>HEY MAN!.......wanna hear a joke?</h1>
-                            <p></p>
-                            <img id="dogGif" style="width: 50%;" src="./images/laughingdog.gif" alt="Laughing Dog">
-                            <button type="button" id="closeModal" class="modal__close">X</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Joke Modal -->
                 <div class="scroll-container">
                     <div class="mainContent">
                         <div class="welcomeSection">
@@ -166,15 +171,16 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Button -->
-                    <div id="adoptButton">
-                        <button id="goToAdopt" type="button"><a href="./adoption.html">Find Your New Best Friend Here!</a></button>
-                    </div>
-
                 </div>
+
+                <!-- Button -->
+                <div id="adoptButton">
+                    <button id="goToAdopt" type="button"><a href="./adoption.html">Find Your New Best Friend Here!</a></button>
+                </div>
+
             </div>
         </div>
+    </div>
     </div>
     <footer id="footer">
 
