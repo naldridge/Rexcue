@@ -61,3 +61,17 @@ fetch translator - https://kigiri.github.io/fetch/
 
 <a href="https://www.petfinder.com/pet-adoption/dog-adoption/military-dog-adoption/ ">Military Dog Adoption </a>
 
+# Screenshots
+
+![](images/homeScreenShot.png)
+
+![](images/shelterScreenShot.png)
+
+![](images/breedsScreenShot.png)
+
+![](images/adoptionScreenShot.png)
+
+![](images/homeMobile.png)
+
+![](images/quizMobile.png)
+
