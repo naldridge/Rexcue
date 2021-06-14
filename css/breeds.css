@@ -71,6 +71,12 @@ div.navbar {
     justify-content: center;
 }
 
+#doglogopic {
+    width: 70%;
+    min-width: 91px;
+    padding-top: 8px;
+}
+
 #navbar ul {
     display: flex;
     flex-direction: row;
@@ -90,11 +96,11 @@ div a {
     font-size: 14px;
 }
 
-div a:hover {
+div a.hover:hover {
     color: #f06543;
 }
 
-div a::before {
+div a.hover::before {
     content: '';
     display: block;
     height: 5px;
@@ -105,7 +111,7 @@ div a::before {
     transition: all ease-in-out 250ms;
 }
 
-div a:hover::before {
+div a.hover:hover::before {
     width: 100%;
 }
 
@@ -264,7 +270,7 @@ nav,
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    margin: 90px auto 0;
+    margin: 101px auto 0;
     /* max-width: 790px; */
 }
 
