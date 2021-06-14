@@ -23,20 +23,21 @@ function buildQuote(theQuote) {
 }
 
 // const tellJoke = document.querySelector(`#dogJokeModal`);
-
+// https://api.chucknorris.io/jokes/random?category=dev
 
 document.addEventListener('DOMContentLoaded', function() {
     fetch('https://api.chucknorris.io/jokes/random?category=dev')
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
-            buildQuote(data.value);
-        })
-        .catch(function(error) {
-            console.error("ERROR: ", error);
-            return error;
-        });
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function(data) {
+        console.log(data);
+        buildQuote(data.value);
+    })
+    .catch(function(error) {
+        console.error("ERROR: ", error)
+        return error;
+    });
 
     document.addEventListener('keydown', function(event) {
         console.log("the key that was pressed is: ", event.key);
@@ -50,7 +51,40 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.addEventListener('click', function() {
         toggleModal();
     });
-});
+})
+    
+
+
+
+
+
+    // fetch('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1'), {
+    //     mode: `no-cors`,
+    // }
+    //     .then(function(response) {
+    //         return response.json();
+    //     })
+    //     .then(function(data) {
+    //         buildQuote(data.value);
+    //     })
+    //     .catch(function(error) {
+    //         console.error("ERROR: ", error);
+    //         return error;
+    //     });
+
+    // document.addEventListener('keydown', function(event) {
+    //     console.log("the key that was pressed is: ", event.key);
+    //     if (event.key === 'Escape') {
+    //         toggleModal();
+    //     }
+    // });
+
+    // const overlay = document.querySelector('#overlay');
+
+    // overlay.addEventListener('click', function() {
+    //     toggleModal();
+    // });
+    // });
 
 
 // Show Breed pictures ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
