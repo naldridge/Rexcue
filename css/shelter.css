@@ -480,3 +480,7 @@ div#columns figure img {
 #mainHeaderContent {
     color: white;
 }
+
+#dogResults {
+    padding: 0;
+}
