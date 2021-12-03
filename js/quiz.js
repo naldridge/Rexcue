@@ -26,7 +26,6 @@ const quizResults = document.getElementById('quizResults');
 function showResults() {
     const resultsArray = [];
 
-
     //Gets input values on quiz
     for (i = 0; i < inputs.length; i++) {
         if (inputs[i].type = "radio") {
@@ -35,35 +34,75 @@ function showResults() {
         };
 
     };
+
     //filters resultsArray to remove empty radio selections
     const answeredArray = resultsArray.filter(function() { return true });
     const newUser = createUser(answeredArray);
 
-    //compares Dog Personality traits against User Personality traits
-    let match = Dogs.find(match => match.traitValue1 === answeredArray[0] &&
-        match.traitValue2 === answeredArray[1] &&
-        match.traitValue3 === answeredArray[2] &&
-        match.traitValue4 === answeredArray[3] &&
-        match.traitValue5 === answeredArray[4]);
+    //Finds Exact Matches between user inputs and Dog Traits
+    let exactMatch = Dogs.find(exactMatch  => exactMatch.traitValue1 === answeredArray[0] &&
+        exactMatch.traitValue2 === answeredArray[1] &&
+        exactMatch.traitValue3 === answeredArray[2] &&
+        exactMatch.traitValue4 === answeredArray[3] &&
+        exactMatch.traitValue5 === answeredArray[4]);
 
-    //shows comparison match if True, else shows no match
+    //Finds closest Matches if an exact Match isn't found
+    function compareResults() {
+        let possibleMatch = [];
+        for (let i=0; i < Dogs.length; i++) {
+            if (Dogs[i].traitValue1 === answeredArray[0]) {
+                possibleMatch.push(Dogs[i].breed);
+            } 
+        }
+        for (let i=0; i < Dogs.length; i++) {
+            if (Dogs[i].traitValue2 === answeredArray[1]) {
+                possibleMatch.push(Dogs[i].breed);
+            } 
+        }
+        for (let i=0; i < Dogs.length; i++) {
+            if (Dogs[i].traitValue3 === answeredArray[2]) {
+                possibleMatch.push(Dogs[i].breed);
+            } 
+        }
+        for (let i=0; i < Dogs.length; i++) {
+            if (Dogs[i].traitValue4 === answeredArray[3]) {
+                possibleMatch.push(Dogs[i].breed);
+            } 
+        }
+        for (let i=0; i < Dogs.length; i++) {
+            if (Dogs[i].traitValue5 === answeredArray[4]) {
+                possibleMatch.push(Dogs[i].breed);
+            } 
+        }
+        console.log("Possible Matches: ", possibleMatch);
+        function mode(arr){
+            return arr.sort((a,b) =>
+            arr.filter(v => v===a).length
+            - arr.filter(v => v===b).length
+            ).pop();
+        }
+        let bestMatch = mode(possibleMatch);
+        console.log("Best Match: " + bestMatch);
+        return bestMatch;
+    }
+
+   
+    //shows comparison match if True, else shows closest match
     function showMatch() {
-        if (Boolean(match)) {
-            let matchBreed = match.breed;
-            console.log("match is: ", match.breed);
+        if (Boolean(exactMatch)) {
+            let matchBreed = exactMatch.breed;
+            console.log("Exact Match: ", matchBreed);
             quizResults.innerText = "Your match is: " + matchBreed;
-            return match;
+            return exactMatch;
         } else {
-            console.log("no match found");
+            let closestMatch = compareResults();
+            quizResults.innerText = "Your match is: " + closestMatch
             return;
         };
     };
 
+    
     showMatch();
-
-    console.log(match);
-
-
 };
 
 
