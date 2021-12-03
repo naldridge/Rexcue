@@ -22,6 +22,24 @@ const inputs = document.querySelectorAll('input');
 const showMeButton = document.getElementById('showMe');
 const quizResults = document.getElementById('quizResults');
 
+//Fetch Dog Image by quiz results
+const generateDogImage = (imageUrl) => {
+    console.log("imageURL: ", imageUrl);
+    const dogContainer = document.querySelector(`#dogImage`);
+    const dogImage = document.createElement(`img`);
+    const clearImage = document.querySelector(`img`);
+    clearImage.remove();
+    dogImage.setAttribute(`src`, imageUrl);
+    dogContainer.append(dogImage);
+}
+
+const fetchDogImage = async(breedId) => {
+    const BASE_API_URL = `https://dog.ceo/api/breed/`;
+    const data = await fetch(BASE_API_URL + breedId + '/images/random').then((data) => data.json());
+    console.log("Data: ", data.message);
+    generateDogImage(data.message);
+}
+
 
 function showResults() {
     const resultsArray = [];
@@ -51,27 +69,27 @@ function showResults() {
         let possibleMatch = [];
         for (let i=0; i < Dogs.length; i++) {
             if (Dogs[i].traitValue1 === answeredArray[0]) {
-                possibleMatch.push(Dogs[i].breed);
+                possibleMatch.push(Dogs[i]);
             } 
         }
         for (let i=0; i < Dogs.length; i++) {
             if (Dogs[i].traitValue2 === answeredArray[1]) {
-                possibleMatch.push(Dogs[i].breed);
+                possibleMatch.push(Dogs[i]);
             } 
         }
         for (let i=0; i < Dogs.length; i++) {
             if (Dogs[i].traitValue3 === answeredArray[2]) {
-                possibleMatch.push(Dogs[i].breed);
+                possibleMatch.push(Dogs[i]);
             } 
         }
         for (let i=0; i < Dogs.length; i++) {
             if (Dogs[i].traitValue4 === answeredArray[3]) {
-                possibleMatch.push(Dogs[i].breed);
+                possibleMatch.push(Dogs[i]);
             } 
         }
         for (let i=0; i < Dogs.length; i++) {
             if (Dogs[i].traitValue5 === answeredArray[4]) {
-                possibleMatch.push(Dogs[i].breed);
+                possibleMatch.push(Dogs[i]);
             } 
         }
         console.log("Possible Matches: ", possibleMatch);
@@ -82,7 +100,7 @@ function showResults() {
             ).pop();
         }
         let bestMatch = mode(possibleMatch);
-        console.log("Best Match: " + bestMatch);
+        console.log("Best Match: " + bestMatch.breed);
         return bestMatch;
     }
 
@@ -93,10 +111,12 @@ function showResults() {
             let matchBreed = exactMatch.breed;
             console.log("Exact Match: ", matchBreed);
             quizResults.innerText = "Your match is: " + matchBreed;
+            fetchDogImage(exactMatch.breedId);
             return exactMatch;
         } else {
             let closestMatch = compareResults();
-            quizResults.innerText = "Your match is: " + closestMatch
+            quizResults.innerText = "Your match is: " + closestMatch.breed;
+            fetchDogImage(closestMatch.breedId);
             return;
         };
     };
@@ -136,14 +156,16 @@ let Dogs = [{
         "traitValue3": "5",
         "traitValue4": "2",
         "traitValue5": "4",
+        "breedId": "terrier/russell",
     },
     {
-        "breed": "American Bulldog",
+        "breed": "French Bulldog",
         "traitValue1": "2",
         "traitValue2": "2",
         "traitValue3": "5",
         "traitValue4": "2",
         "traitValue5": "5",
+        "breedId": "bulldog/french",
     },
     {
         "breed": "Great Dane",
@@ -152,6 +174,7 @@ let Dogs = [{
         "traitValue3": "2",
         "traitValue4": "4",
         "traitValue5": "3",
+        "breedId": "dane/great",
     },
     {
         "breed": "Chihuahua",
@@ -160,6 +183,7 @@ let Dogs = [{
         "traitValue3": "1",
         "traitValue4": "4",
         "traitValue5": "5",
+        "breedId": "chihuahua",
     },
     {
         "breed": "German Shepherd",
@@ -168,6 +192,7 @@ let Dogs = [{
         "traitValue3": "5",
         "traitValue4": "5",
         "traitValue5": "5",
+        "breedId": "germanshepherd",
     },
     /* {
         "breed": "",
@@ -187,3 +212,4 @@ class User {
         this.traitvalues = traitvalues;
     }
 };
+
