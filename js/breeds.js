@@ -86,6 +86,8 @@ const fillDoggoImage = (imageUrl) => {
     console.log(imageUrl);
     const doggoContainer = document.querySelector(`#doggoImage`)
     const doggoImage = document.createElement(`img`);
+    const clearImage = document.querySelector(`img`);
+    clearImage.remove();
     doggoImage.setAttribute(`src`, imageUrl);
     doggoContainer.append(doggoImage);
 }
