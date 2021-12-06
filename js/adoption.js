@@ -5,25 +5,22 @@ const rescueResults = document.getElementById("rescueResults");
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    /* 
+    
     // gets geolocation data in the form of Lat/Longs
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            rescueResults.innerText = "Geolocation is not supported by this browser.";
-        }
+    function getPos() {
+        navigator.geolocation.getCurrentPosition(success);
     };
 
-    function showPosition(position) {
-        const calculatedLocation = "latitude=" + position.coords.latitude + "&" + "longitude=" + position.coords.longitude;
-        console.log("Latitude: " + position.coords.latitude +
-            "<br>Longitude: " + position.coords.longitude); 
-        console.log(calculatedLocation);
-        fetchPetfinder(calculatedLocation);
-    };
-    getLocation();
-    showPosition();  */
+    function success(pos) {
+        let position = pos.coords;
+
+        console.log('Your current position is:');
+        console.log(`Latitude : ${position.latitude}`);
+        console.log(`Longitude: ${position.longitude}`);
+        console.log(`More or less ${position.accuracy} meters.`);
+      }
+    
+    getPos();
 });
 
 rescueSearch.addEventListener('click', function () {
@@ -31,7 +28,7 @@ rescueSearch.addEventListener('click', function () {
     const dogResults = document.getElementById('dogResults');
 
 
-    console.log(zipInput);
+    console.log("Zip: ", zipInput);
 
     //petfinder API fetch request
     //petfinder recommends cURL - which I've converted to a fetch request
@@ -40,7 +37,7 @@ rescueSearch.addEventListener('click', function () {
     function fetchPetfinder() {
         //original fetch simply gets an access token which is used to query API
         fetch("https://api.petfinder.com/v2/oauth2/token", {
-            body: "grant_type=client_credentials&client_id=a6aW5mbZxRLDgezrGMZ3LaWex03veHxBtdQ4UQLik4eaglpe7J&client_secret=1pWWaeAFcUdR70TfuVn08wSv6cD283kXec6wJLXq",
+            body: "grant_type=client_credentials&client_id=GykKUK32gXAi6ZW7vjvuASjLEYEIgnlR2zEnwcmOkRLtScO8qe&client_secret=NkKcXUHK3ecDvYSYSEgNcArjwkFh9JbU57EbZr7G",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
@@ -58,8 +55,7 @@ rescueSearch.addEventListener('click', function () {
             });
         }).then(function (response) {
             // Return the API response as JSON
-            return response.json();
-
+             return response.json();
         }).then(function (data) {
             // Log the pet data
             console.log(data.pagination)
@@ -74,6 +70,7 @@ rescueSearch.addEventListener('click', function () {
         });
     };
 
+
     function breakoutAdoptableDogs(animals) {
         const adoptableDogs = animals;
         console.log("dogs to be rescued: ", adoptableDogs);
@@ -82,11 +79,15 @@ rescueSearch.addEventListener('click', function () {
         let dogList = document.createElement('ul');
         adoptableDogs.forEach(function (element) {
 
+            console.log("Element: ", element);
+
             //console.log("element is: ", element);
             let detailsLi = document.createElement('li');
-            
+            let imageLi = document.createElement('img');
+            imageLi.src = element.primary_photo_cropped.medium;    
 
             detailsLi.innerText = `${element.name} ${element.breeds.primary} ${element.size} ${element.url}`;
+            dogList.appendChild(imageLi);
             dogList.appendChild(detailsLi);
 
             dogResults.appendChild(dogList);
@@ -99,13 +100,14 @@ rescueSearch.addEventListener('click', function () {
 
 
 // Show Breed pictures ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 function showBreeds(data) {
     console.log(data, 'inside show breeds')
     const image = document.createElement('img')
     image.src = data.message;
     console.log(image)
 
-    const container = document.querySelector('#adoptDog1')
+    const container = document.querySelector('#adoptDog')
     container.append(image)
 }
 
