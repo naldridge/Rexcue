@@ -79,18 +79,30 @@ rescueSearch.addEventListener('click', function () {
         let dogList = document.createElement('ul');
         adoptableDogs.forEach(function (element) {
 
-            console.log("Element: ", element);
-
             //console.log("element is: ", element);
+            let adoptCard = document.createElement('li');
+            let nameLi = document.createElement('li');
             let detailsLi = document.createElement('li');
             let imageLi = document.createElement('img');
-            imageLi.src = element.primary_photo_cropped.medium;    
+            let linkEl = document.createElement('a');
 
-            detailsLi.innerText = `${element.name} ${element.breeds.primary} ${element.size} ${element.url}`;
-            dogList.appendChild(imageLi);
-            dogList.appendChild(detailsLi);
+            imageLi.src = element.primary_photo_cropped.medium;
+            linkEl.setAttribute('href', element.url);
+            linkEl.innerText = "Click to See Profile";
+
+            nameLi.innerText = `${element.name}`;
+            detailsLi.innerText = `${element.breeds.primary}, Size: ${element.size}`;
+
+            adoptCard.appendChild(nameLi);
+            adoptCard.appendChild(imageLi);
+            adoptCard.appendChild(detailsLi);
+            adoptCard.appendChild(linkEl);
+            adoptCard.className = 'adoptCard';
+
+            dogList.appendChild(adoptCard);
 
             dogResults.appendChild(dogList);
+
 
         });
     };
