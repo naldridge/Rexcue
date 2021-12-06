@@ -18,17 +18,92 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(`Latitude : ${position.latitude}`);
         console.log(`Longitude: ${position.longitude}`);
         console.log(`More or less ${position.accuracy} meters.`);
+
+        fetch("https://api.petfinder.com/v2/oauth2/token", {
+            body: "grant_type=client_credentials&client_id=GykKUK32gXAi6ZW7vjvuASjLEYEIgnlR2zEnwcmOkRLtScO8qe&client_secret=NkKcXUHK3ecDvYSYSEgNcArjwkFh9JbU57EbZr7G",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            method: "POST"
+        }).then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            //console.log('token ', data);
+            return fetch(`https://api.petfinder.com/v2/animals?type=dog&location=${position.latitude},${position.longitude}&distance=10`, {
+                //second fetch request uses access token get API data
+                headers: {
+                    Authorization: data.token_type + " " + data.access_token,
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            });
+        }).then(function (response) {
+            // Return the API response as JSON
+             return response.json();
+        }).then(function (data) {
+            // Log the pet data
+            console.log(data.pagination)
+            //console.log(data.animals);
+            return data.animals;
+        }).then(function (animals) {
+            console.log(animals);
+            breakoutAdoptableDogs(animals);
+        }).catch(function (error) {
+            console.error("ERROR: ", error);
+            return error;
+        });
       }
     
     getPos();
 });
 
-rescueSearch.addEventListener('click', function () {
-    const zipInput = document.getElementById('zipcodeTxt').value;
+function breakoutAdoptableDogs(animals) {
+    const adoptableDogs = animals;
+    const dogResults = document.getElementById('dogResults');
+    console.log("dogs to be rescued: ", adoptableDogs);
+
+
+    let dogList = document.createElement('ul');
+    adoptableDogs.forEach(function (element) {
+
+        //console.log("element is: ", element);
+        let adoptCard = document.createElement('li');
+        let nameLi = document.createElement('li');
+        let detailsLi = document.createElement('li');
+        let imageLi = document.createElement('img');
+        let linkEl = document.createElement('a');
+
+        imageLi.src = element.primary_photo_cropped.medium;
+        linkEl.setAttribute('href', element.url);
+        linkEl.innerText = "Click to See Profile";
+
+        nameLi.innerText = `${element.name}`;
+        detailsLi.innerText = `${element.breeds.primary}, Size: ${element.size}`;
+
+        adoptCard.appendChild(nameLi);
+        adoptCard.appendChild(imageLi);
+        adoptCard.appendChild(detailsLi);
+        adoptCard.appendChild(linkEl);
+        adoptCard.className = 'adoptCard';
+
+        dogList.appendChild(adoptCard);
+
+        dogResults.appendChild(dogList);
+
+
+    });
+};
+
+function clearadoptUl() {
     const dogResults = document.getElementById('dogResults');
 
+    while(dogResults.firstChild) dogResults.removeChild(dogResults.firstChild);
+};
 
-    console.log("Zip: ", zipInput);
+rescueSearch.addEventListener('click', function () {
+    const zipInput = document.getElementById('zipcodeTxt').value;
+
+
+ 
 
     //petfinder API fetch request
     //petfinder recommends cURL - which I've converted to a fetch request
@@ -70,193 +145,7 @@ rescueSearch.addEventListener('click', function () {
         });
     };
 
-
-    function breakoutAdoptableDogs(animals) {
-        const adoptableDogs = animals;
-        console.log("dogs to be rescued: ", adoptableDogs);
-
-
-        let dogList = document.createElement('ul');
-        adoptableDogs.forEach(function (element) {
-
-            //console.log("element is: ", element);
-            let adoptCard = document.createElement('li');
-            let nameLi = document.createElement('li');
-            let detailsLi = document.createElement('li');
-            let imageLi = document.createElement('img');
-            let linkEl = document.createElement('a');
-
-            imageLi.src = element.primary_photo_cropped.medium;
-            linkEl.setAttribute('href', element.url);
-            linkEl.innerText = "Click to See Profile";
-
-            nameLi.innerText = `${element.name}`;
-            detailsLi.innerText = `${element.breeds.primary}, Size: ${element.size}`;
-
-            adoptCard.appendChild(nameLi);
-            adoptCard.appendChild(imageLi);
-            adoptCard.appendChild(detailsLi);
-            adoptCard.appendChild(linkEl);
-            adoptCard.className = 'adoptCard';
-
-            dogList.appendChild(adoptCard);
-
-            dogResults.appendChild(dogList);
-
-
-        });
-    };
-
+    
+    clearadoptUl();
     fetchPetfinder();
 });
-
-
-// Old Hardwired Breed pictures ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-/* function showBreeds(data) {
-    console.log(data, 'inside show breeds')
-    const image = document.createElement('img')
-    image.src = data.message;
-    console.log(image)
-
-    const container = document.querySelector('#adoptDog')
-    container.append(image)
-}
-
-function showBreeds2(data) {
-    console.log(data, 'inside show breeds')
-    const image = document.createElement('img')
-    image.src = data.message;
-    console.log(image)
-
-    const container = document.querySelector('#adoptDog2')
-    container.append(image)
-}
-
-function showBreeds3(data) {
-    console.log(data, 'inside show breeds')
-    const image = document.createElement('img')
-    image.src = data.message;
-    console.log(image)
-
-    const container = document.querySelector('#adoptDog3')
-    container.append(image)
-}
-
-function showBreeds4(data) {
-    console.log(data, 'inside show breeds')
-    const image = document.createElement('img')
-    image.src = data.message;
-    console.log(image)
-
-    const container = document.querySelector('#adoptDog4')
-    container.append(image)
-}
-
-function showBreeds5(data) {
-    console.log(data, 'inside show breeds')
-    const image = document.createElement('img')
-    image.src = data.message;
-    console.log(image)
-
-    const container = document.querySelector('#adoptDog5')
-    container.append(image)
-}
-
-function showBreeds6(data) {
-    console.log(data, 'inside show breeds')
-    const image = document.createElement('img')
-    image.src = data.message;
-    console.log(image)
-
-    const container = document.querySelector('#adoptDog6')
-    container.append(image)
-}
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('https://dog.ceo/api/breeds/image/random')
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
-
-            showBreeds(data);
-
-        })
-        .catch(function(error) {
-            console.error("ERROR: ", error);
-            return error;
-        });
-
-    fetch('https://dog.ceo/api/breeds/image/random')
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
-
-            showBreeds2(data);
-
-        })
-        .catch(function(error) {
-            console.error("ERROR: ", error);
-            return error;
-        });
-
-    fetch('https://dog.ceo/api/breeds/image/random')
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
-
-            showBreeds3(data);
-
-        })
-        .catch(function(error) {
-            console.error("ERROR: ", error);
-            return error;
-        });
-
-    fetch('https://dog.ceo/api/breeds/image/random')
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
-
-            showBreeds4(data);
-
-        })
-        .catch(function(error) {
-            console.error("ERROR: ", error);
-            return error;
-        });
-
-    fetch('https://dog.ceo/api/breeds/image/random')
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
-
-            showBreeds5(data);
-
-        })
-        .catch(function(error) {
-            console.error("ERROR: ", error);
-            return error;
-        });
-
-    fetch('https://dog.ceo/api/breeds/image/random')
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
-
-            showBreeds6(data);
-
-        })
-        .catch(function(error) {
-            console.error("ERROR: ", error);
-            return error;
-        });
-}); */
