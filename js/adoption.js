@@ -111,9 +111,9 @@ rescueSearch.addEventListener('click', function () {
 });
 
 
-// Show Breed pictures ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Old Hardwired Breed pictures ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-function showBreeds(data) {
+/* function showBreeds(data) {
     console.log(data, 'inside show breeds')
     const image = document.createElement('img')
     image.src = data.message;
@@ -259,4 +259,4 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error("ERROR: ", error);
             return error;
         });
-});
+}); */
