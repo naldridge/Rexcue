@@ -212,8 +212,8 @@ nav,
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 101px auto 0;
-    max-width: 790px;
+    margin: 50px auto 0;
+    max-width: fit-content;
     background-color: rgba(255, 255, 255, 0.623);
 }
 
@@ -228,7 +228,7 @@ nav,
 #container2 {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: fit-content;
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -380,4 +380,58 @@ legend {
 
 #quizResults {
     font-size: xx-large;
+    display: flexbox;
+}
+
+#adoptDog {
+    border-radius: 50%;
+    justify-content: space-between;
+}
+
+.adoptCard {
+    border-radius: 20%;
+    justify-content: space-between;
+}
+
+.dogImage ul{
+    column-width: 320px;
+    column-gap: 15px;
+    column-count: 4;
+    height: 50px;
+    margin: 50px auto;
+    display: inline-block;
+    width: fit-content;
+}
+
+.dogImage ul:hover .adoptCard:not(:hover) {
+    opacity: 0.4;
+}
+
+.adoptCard {
+    background: #fefefe;
+    border: 2px solid #fcfcfc;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    margin: 0 2px 15px;
+    padding: 15px;
+    padding-bottom: 10px;
+    transition: opacity .4s ease-in-out;
+    display: inline-block;
+}
+
+.adoptCard li {
+    text-align: center;
+}
+
+.adoptCard a {
+    padding: 20%;
+}
+
+.adoptCard img {
+    max-height: 250px;
+    max-width: 250px;
+    width: auto;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
 }
